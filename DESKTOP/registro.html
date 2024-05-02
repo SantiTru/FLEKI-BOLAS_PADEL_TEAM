@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+  <img src="css/imagen/card-1.jpg" class="imagen-fondo">
+  <div class="register-container">
+    <form id="register-form">
+      <h2>Registrarse</h2>
+      <div class="form-group">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Ingresa tus apellidos" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+      </div>
+      <button type="submit">Registrarse</button>
+    </form>
+    <div class="login-link">
+      <p>¿Ya tienes una cuenta?</p>
+      <button id="login-link-btn">Iniciar Sesión</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('login-link-btn').onclick = function() {
+      window.location.href = "index.html";
+    };
+  </script>
+</body>
+</html>
