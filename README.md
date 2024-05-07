@@ -1,6 +1,6 @@
 # FLEKI-BOLAS_PADEL_TEAM
 
-<p align="rigth">
+<p align="right">
   <img src="https://github.com/SantiTru/FLEKI-BOLAS_PADEL_TEAM/assets/117385307/8f5a20de-9129-4e3e-99bb-b97880204160" alt="FlekiBolas280"/>
 </p>
 
