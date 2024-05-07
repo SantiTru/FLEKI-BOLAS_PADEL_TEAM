@@ -24,9 +24,7 @@ Fleki-Bolas Pádel Team es una página web en donde podrás realizar reservas de
 
 # Bitácora del proyecto
 
-## Fecha
-
-16/04/2024
+## **16/04/2024**
 
 ### Tareas realizadas / usuario
 
@@ -39,7 +37,7 @@ Fleki-Bolas Pádel Team es una página web en donde podrás realizar reservas de
 
 ☀️ Revisión del esquema E/R según observaciones del equipo educativo. Página mobile Figma.
 
-## Fecha 06/05/2024
+## **06/05/2024**
 
 ### Tareas realizadas / usuario
 
