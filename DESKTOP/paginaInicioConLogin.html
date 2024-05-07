@@ -16,7 +16,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/paginaInicioConLogin.css" />
   <link rel="stylesheet" href="css/prueba.css" />
+  <link rel="stylesheet" href="app_clima/style.css" />
   <script src="js/script.js"></script>
+  <script src="app_clima/app.js"></script>
 </head>
 <div>
   <nav class="navegacion">
@@ -58,7 +60,7 @@
     <button id="search-btn">Buscar</button>
   </div>
 
-  <div class="card-tiempo">
+  <!--<div class="card-tiempo">
     <div class="card-dias">
       <div class="card-texto-lunes">
         <p>22/04</p>
@@ -145,9 +147,22 @@
     </div>
 
     
-  </div>
+  </div>-->
 
-    
+  <div id="contenedor">
+    <div id="caja1">
+        <h1 id="temperatura-valor"></h1>
+        <h1 id="temperatura-descripcion"></h1>
+    </div>
+    <div id="caja2">
+        <h2 id="ubicacion"></h2>
+        <img id="icono-animado" src="" alt="" height="128" width="128">
+    </div>
+    <div id="caja3">
+        <h3>Veloc. del Viento</h3>
+        <h1 id="viento-velocidad"></h1>
+    </div>
+  </div>
 
 
   <div class="calendario">
