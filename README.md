@@ -22,19 +22,35 @@ Fleki-Bolas Pádel Team es una página web en donde podrás realizar reservas de
   <img src="https://github.com/SantiTru/FLEKI-BOLAS_PADEL_TEAM/assets/117385307/22c74aae-aa49-445e-8265-8ee8efa1aaca" alt="FlekiBolas50"/>
 </p>
 
-## Bitácora del proyecto
+# Bitácora del proyecto
 
 ## Fecha
 
 16/04/2024
 
-## Tareas realizadas / usuario
+### Tareas realizadas / usuario
 
-- Organización en Notion de la bitácora del proyecto / ***Santi***
+- Implementación bitácora del proyecto / ***Santi***
 - Dar de alta e informar al equipo educativo el repositorio de GitHub del proyecto / ***Santi***
 - Resumen dudas / ***Santi***
 - Implementar lista de tareas / ***Santi***
 
-## Próximos pasos
+### Próximos pasos
 
 ☀️ Revisión del esquema E/R según observaciones del equipo educativo. Página mobile Figma.
+
+## Fecha 06/05/2024
+
+### Tareas realizadas / usuario
+
+- Versión de Login y Registro con Javascript / ***Santi***
+- Revisar estructura de carpetas / ***Santi***
+- Consulta de dudas / ***Santi***
+
+### Próximos pasos
+
+☀️ Revisión del esquema E/R según observaciones del equipo educativo.
+☀️ Plantear Sección tareas de usuario
+☀️ Plantear sección nutrición
+
+
