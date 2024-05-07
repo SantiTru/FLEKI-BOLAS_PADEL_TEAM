@@ -16,7 +16,9 @@ Fleki-Bolas Pádel Team es una página web en donde podrás realizar reservas de
 - 😄 Pronouns: She/her, He/him
 - ⚡ Fun fact: Santi's favorite hobby is cooking, Cris' favorite hobby is paddle tennis. This page is our favorite hobbies made web page.
 
-![FlekiBolas50](https://github.com/SantiTru/FLEKI-BOLAS_PADEL_TEAM/assets/117385307/22c74aae-aa49-445e-8265-8ee8efa1aaca)
+<p align="center">
+  <img src="https://github.com/SantiTru/FLEKI-BOLAS_PADEL_TEAM/assets/117385307/22c74aae-aa49-445e-8265-8ee8efa1aaca" alt="FlekiBolas50"/>
+</p>
 
 ## Bitácora del proyecto
 
