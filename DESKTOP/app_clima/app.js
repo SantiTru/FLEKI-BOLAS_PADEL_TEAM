@@ -1,91 +1,57 @@
-window.addEventListener('load', ()=> {
-    let lon
-    let lat
+window.addEventListener('load', () => {
+  let temperaturaValor = document.getElementById('temperatura-valor');
+  let temperaturaDescripcion = document.getElementById('temperatura-descripcion');
+  let ubicacion = document.getElementById('ubicacion');
+  let iconoAnimado = document.getElementById('icono-animado');
+  let vientoVelocidad = document.getElementById('viento-velocidad');
 
-    let temperaturaValor = document.getElementById('temperatura-valor')  
-    let temperaturaDescripcion = document.getElementById('temperatura-descripcion')  
-    
-    let ubicacion = document.getElementById('ubicacion')  
-    let iconoAnimado = document.getElementById('icono-animado') 
+  const searchBtn = document.getElementById('search-btn');
+  const cityInput = document.getElementById('city-input');
 
-    let vientoVelocidad = document.getElementById('viento-velocidad') 
+  searchBtn.addEventListener('click', () => {
+      const city = cityInput.value;
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=es&units=metric&appid=25e7e4f280ebb9165a71e377b5e402d0`;
 
+      fetch(url)
+          .then(response => response.json())
+          .then(data => {
+              let temp = Math.round(data.main.temp);
+              temperaturaValor.textContent = `${temp} ° C`;
 
-    if(navigator.geolocation){
-       navigator.geolocation.getCurrentPosition( posicion => {
-           //console.log(posicion.coords.latitude)
-           lon = posicion.coords.longitude
-           lat = posicion.coords.latitude
-            //ubicación actual    
-           //const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${AQUI_VIENE_TU_API_KEY}`
+              let desc = data.weather[0].description;
+              temperaturaDescripcion.textContent = desc.toUpperCase();
+              ubicacion.textContent = data.name;
 
-           //ubicación por ciudad
-           const url = `https://api.openweathermap.org/data/2.5/weather?q=Malaga&lang=es&units=metric&appid=25e7e4f280ebb9165a71e377b5e402d0`
+              vientoVelocidad.textContent = `${data.wind.speed} m/s`;
 
-           //console.log(url)
-
-           fetch(url)
-            .then( response => { return response.json()})
-            .then( data => {
-                //console.log(data)
-                
-                let temp = Math.round(data.main.temp)
-                //console.log(temp)
-                temperaturaValor.textContent = `${temp} ° C`
-
-                //console.log(data.weather[0].description)
-                let desc = data.weather[0].description
-                temperaturaDescripcion.textContent = desc.toUpperCase()
-                ubicacion.textContent = data.name
-                
-                vientoVelocidad.textContent = `${data.wind.speed} m/s`
-                
-                //para iconos estáticos
-                //const urlIcon = `http://openweathermap.org/img/wn/${iconCode}.png`                     
-                //icono.src = urlIcon
-                //console.log(data.weather[0].icon)
-
-                //para iconos dinámicos
-                console.log(data.weather[0].main)
-                switch (data.weather[0].main) {
-                    case 'Thunderstorm':
-                      iconoAnimado.src='./app_clima/animated/thunder.svg'
-                      console.log('TORMENTA');
+              switch (data.weather[0].main) {
+                  case 'Thunderstorm':
+                      iconoAnimado.src = './app_clima/animated/thunder.svg';
                       break;
-                    case 'Drizzle':
-                      iconoAnimado.src='./app_clima/animated/rainy-2.svg'
-                      console.log('LLOVIZNA');
+                  case 'Drizzle':
+                      iconoAnimado.src = './app_clima/animated/rainy-2.svg';
                       break;
-                    case 'Rain':
-                      iconoAnimado.src='./app_clima/animated/rainy-7.svg'
-                      console.log('LLUVIA');
+                  case 'Rain':
+                      iconoAnimado.src = './app_clima/animated/rainy-7.svg';
                       break;
-                    case 'Snow':
-                      iconoAnimado.src='./app_clima/animated/snowy-6.svg'
-                        console.log('NIEVE');
-                      break;                        
-                    case 'Clear':
-                        iconoAnimado.src='./app_clima/animated/day.svg'
-                        console.log('LIMPIO');
+                  case 'Snow':
+                      iconoAnimado.src = './app_clima/animated/snowy-6.svg';
                       break;
-                    case 'Atmosphere':
-                      iconoAnimado.src='./app_clima/animated/weather.svg'
-                        console.log('ATMOSFERA');
-                        break;  
-                    case 'Clouds':
-                        iconoAnimado.src='./app_clima/animated/cloudy-day-1.svg'
-                        console.log('NUBES');
-                        break;  
-                    default:
-                      iconoAnimado.src='./app_clima/animated/cloudy-day-1.svg'
-                      console.log('por defecto');
-                  }
-
-            })
-            .catch( error => {
-                console.log(error)
-            })
-       })
-          
-    }
-})
+                  case 'Clear':
+                      iconoAnimado.src = './app_clima/animated/day.svg';
+                      break;
+                  case 'Atmosphere':
+                      iconoAnimado.src = './app_clima/animated/weather.svg';
+                      break;
+                  case 'Clouds':
+                      iconoAnimado.src = './app_clima/animated/cloudy-day-1.svg';
+                      break;
+                  default:
+                      iconoAnimado.src = './app_clima/animated/cloudy-day-1.svg';
+              }
+          })
+          .catch(error => {
+              console.log(error);
+          });
+  });
+});
