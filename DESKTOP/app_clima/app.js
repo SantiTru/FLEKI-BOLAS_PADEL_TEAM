@@ -10,8 +10,7 @@ window.addEventListener("load", () => {
   const searchBtn = document.getElementById("search-btn");
   const cityInput = document.getElementById("city-input");
 
-  searchBtn.addEventListener("click", () => {
-    const city = cityInput.value;
+  function getWeather(city) {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=es&units=metric&appid=25e7e4f280ebb9165a71e377b5e402d0`;
 
     fetch(url)
@@ -55,6 +54,12 @@ window.addEventListener("load", () => {
       .catch((error) => {
         console.log(error);
       });
+  }
+
+  getWeather("malaga");
+  searchBtn.addEventListener("click", () => {
+    const city = cityInput.value;
+
+    getWeather(city);
   });
 });
-F;
