@@ -1,45 +1,48 @@
 /* ESTILO CARD JUGADORAS */
 
 .card-equipo {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: center; 
-  gap: 10px; 
-  margin-top: -20rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas por fila */
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .card-jugadora {
-  width: 20%; 
-  height: 10rem;
+  width: 100%; /* El 25% del ancho del contenedor menos el espacio entre tarjetas */
   border-radius: 10px;
   overflow: hidden;
   background: rgba(242, 235, 50, 0.40);
   box-shadow: 9px 7px 4px 0px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease;
-  display: flex; 
+  display: flex;
 }
 
-.card-imagen{
-  width: 50%; 
-  height: auto; 
-  border-top-left-radius: 10px; 
-  border-bottom-left-radius: 10px; 
+.card-imagen {
+  width: 50%; /* Imagen ocupando el 50% del ancho de la tarjeta */
+  height: auto;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .card-texto {
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 0.4 rem;
-  font-weight: 100;
+  width: 50%; /* Texto ocupando el 50% del ancho de la tarjeta */
+  display: flex; /* Utilizar flexbox */
+  flex-direction: column; /* Alinear el texto verticalmente */
+  justify-content: center; /* Alinear el texto verticalmente */
+  padding: 0.5rem; /* Añadir un relleno para separar el texto del borde */
 }
 
 .card-texto p {
-  margin-left: 0.3rem;
-  color: #2F4637; 
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin: 0.5rem 0; /* Añadir un margen para separar los párrafos */
+  color: #2F4637;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.5rem; /* Ajustar el tamaño del texto */
+  font-weight: 100;
   text-align: center;
-  padding:0.2rem;
 }
+
+
+
 
 /*ESTILO CARD TIEMPO */
 
