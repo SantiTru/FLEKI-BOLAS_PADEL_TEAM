@@ -166,7 +166,9 @@ body {
   position: relative;
   text-align: center;
   overflow-x: auto;
-  width: 100%;
+  overflow-y: hidden;
+  /*width: 100%;*/
+  width: calc(100% + 30px);
   height: 33rem;
   margin: 0 auto;
   margin-top: 5rem;
@@ -273,7 +275,10 @@ li {
   background-color: #f2eb32;
   border: 1px solid #ccc;
   padding: 10px;
-  z-index: 1;
+  z-index: 9999;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
 }
 
 .dia-con-entrenos:hover .tarjeta-informacion {
@@ -292,6 +297,7 @@ li {
 
 .calendario::-webkit-scrollbar {
   height: 1rem;
+  z-index: -1;
 }
 
 .calendario::-webkit-scrollbar-thumb {

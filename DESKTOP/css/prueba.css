@@ -2,13 +2,14 @@
 
 .card-equipo {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas por fila */
+  width: auto;
+  grid-template-columns: repeat(4, 1fr); 
   justify-content: space-between;
-  gap: 2rem;
+  gap: 3vw;
 }
 
 .card-jugadora {
-  width: 100%; /* El 25% del ancho del contenedor menos el espacio entre tarjetas */
+  width: 100%; 
   border-radius: 10px;
   overflow: hidden;
   background: rgba(242, 235, 50, 0.40);
@@ -18,25 +19,25 @@
 }
 
 .card-imagen {
-  width: 50%; /* Imagen ocupando el 50% del ancho de la tarjeta */
+  width: 50%; 
   height: auto;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 
 .card-texto {
-  width: 50%; /* Texto ocupando el 50% del ancho de la tarjeta */
-  display: flex; /* Utilizar flexbox */
-  flex-direction: column; /* Alinear el texto verticalmente */
-  justify-content: center; /* Alinear el texto verticalmente */
-  padding: 0.5rem; /* Añadir un relleno para separar el texto del borde */
+  width: 50%; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  padding: 0.5rem; 
 }
 
 .card-texto p {
-  margin: 0.5rem 0; /* Añadir un margen para separar los párrafos */
+  margin: 0.5rem 0; 
   color: #2F4637;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 1.5rem; /* Ajustar el tamaño del texto */
+  font-size: 1.5rem; 
   font-weight: 100;
   text-align: center;
 }
