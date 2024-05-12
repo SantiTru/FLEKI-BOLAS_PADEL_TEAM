@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search by Macros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Buscar Recetas por Macronutrientes</h1>
+    <form id="searchForm">
+        <label for="minProtein">Proteínas mínimas (g):</label>
+        <input type="number" id="minProtein" name="minProtein" required>
+
+        <label for="maxProtein">Proteínas máximas (g):</label>
+        <input type="number" id="maxProtein" name="maxProtein" required>
+
+        <label for="minFat">Grasas mínimas (g):</label>
+        <input type="number" id="minFat" name="minFat" required>
+
+        <label for="maxFat">Grasas máximas (g):</label>
+        <input type="number" id="maxFat" name="maxFat" required>
+
+        <label for="minCarbs">Carbohidratos mínimos (g):</label>
+        <input type="number" id="minCarbs" name="minCarbs" required>
+
+        <label for="maxCarbs">Carbohidratos máximos (g):</label>
+        <input type="number" id="maxCarbs" name="maxCarbs" required>
+
+        <button type="submit">Buscar Recetas</button>
+    </form>
+
+    <div id="results"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
