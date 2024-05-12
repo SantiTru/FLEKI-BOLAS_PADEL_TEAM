@@ -3,29 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Search by Macros</title>
+    <title>Recipe Search by Diet Type</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Buscar Recetas por Macronutrientes</h1>
+    <h1>Buscar Recetas por Tipo de Dieta y Macronutrientes</h1>
     <form id="searchForm">
+        <label for="diet">Tipo de Dieta:</label>
+        <select id="diet" name="diet">
+            <option value="">Cualquier Dieta</option>
+            <option value="vegetarian">Vegetariana</option>
+            <option value="vegan">Vegana</option>
+            <option value="glutenFree">Sin Gluten</option>
+            <option value="ketogenic">Ketogénica</option>
+            <option value="paleo">Paleo</option>
+        </select>
+
         <label for="minProtein">Proteínas mínimas (g):</label>
-        <input type="number" id="minProtein" name="minProtein" required>
+        <input type="number" id="minProtein" name="minProtein">
 
         <label for="maxProtein">Proteínas máximas (g):</label>
-        <input type="number" id="maxProtein" name="maxProtein" required>
+        <input type="number" id="maxProtein" name="maxProtein">
 
         <label for="minFat">Grasas mínimas (g):</label>
-        <input type="number" id="minFat" name="minFat" required>
+        <input type="number" id="minFat" name="minFat">
 
         <label for="maxFat">Grasas máximas (g):</label>
-        <input type="number" id="maxFat" name="maxFat" required>
+        <input type="number" id="maxFat" name="maxFat">
 
         <label for="minCarbs">Carbohidratos mínimos (g):</label>
-        <input type="number" id="minCarbs" name="minCarbs" required>
+        <input type="number" id="minCarbs" name="minCarbs">
 
         <label for="maxCarbs">Carbohidratos máximos (g):</label>
-        <input type="number" id="maxCarbs" name="maxCarbs" required>
+        <input type="number" id="maxCarbs" name="maxCarbs">
 
         <button type="submit">Buscar Recetas</button>
     </form>
