@@ -17,8 +17,11 @@
   <link rel="stylesheet" href="css/paginaInicioConLogin.css" />
   <link rel="stylesheet" href="css/prueba.css" />
   <link rel="stylesheet" href="app_clima/style.css" />
+  <link rel="stylesheet" href="css/paginaInicioSinLogin.css" />
   <script src="js/script.js"></script>
   <script src="app_clima/app.js"></script>
+  <script src="./js/paginaConLogin.js"></script>
+
 </head>
 <div>
   <nav class="navegacion">
@@ -166,7 +169,7 @@
   </div>
 
 
-  <div class="calendario">
+<div class="calendario">
     <div class="mes">
       <h1>ENERO</h1>
       <ol>
@@ -192,7 +195,7 @@
         <li>13</li>
         <!-- HTML -->
         <li class="dia-con-entrenos">
-          <img src="css/imagen/entrenos.png" alt="entrenos" class="bola-entrenos">
+          <img src="css/imagen/entrenos.png" alt="entrenos" class="bola-entrenos">14
           <div class="tarjeta-informacion">
             <h3>ENTRENOS</h3>
             <p>Lugar: GM Pádel</p>
@@ -661,11 +664,113 @@
         </li>
       </ol>
     </div>
-  </div>
-  </div>
+</div>
+</div>
  
+<div class="iconos">
+  <img src="./css/imagen/entrenos.png" alt="icono-entrenos" class="iconos-entrenos">
+  <p class="iconos-texto"> ENTRENOS</p>
+  <img src="./css/imagen/torneos.png" alt="icono-torneos" class="iconos-torneos">
+  <p class="iconos-texto"> TORNEOS</p>
+  <img src="./css/imagen/ligas.png" alt="icono-ligas" class="iconos-ligas">
+  <p class="iconos-texto"> LIGAS</p>
+</div>
 
-  
+<div class="texto-zona-agenda">
+  MI FLEKI - AGENDA
+</div>
+
+<!--La parte de la tabla-agenda será dinámica cuando hagamos Laravel-->
+<!--ahora es una prueba para ver cómo quedaría-->
+
+<div class="tabla-agenda">
+  <div class="carrusel">
+    <img src="./css/imagen/carrusel-1.jpg" alt="carrusel imagenes partidos" class="carrusel-imagen">
+    <img src="./css/imagen/carrusel-2.jpg" alt="carrusel imagenes partidos" class="carrusel-imagen">
+    <img src="./css/imagen/carrusel-3.jpg" alt="carrusel imagenes partidos" class="carrusel-imagen">  
+  </div>
+  <table>
+    <thead>
+      <th class="tabla-dia-numero"> NUMERO EVENTO</th>
+      <th class="tabla-dia-evento"> DÍA DEL EVENTO</th>
+      <th class="tabla-dia-descripcion"> DESCRIPCION DEL EVENTO</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="tabla-dia-mi-numero">1</td>
+      <td class="tabla-dia-mi-evento">02 Junio 2024</td>
+      <td class="tabla-dia-mi-descripcion">Enfrentamientos amistoso Fénix GM Pádel Club</td>
+    </tr>
+    <tr>
+      <td class="tabla-dia-mi-numero">1</td>
+      <td class="tabla-dia-mi-evento">02 Junio 2024</td>
+      <td class="tabla-dia-mi-descripcion">Enfrentamientos amistoso Fénix GM Pádel Club</td>
+    </tr>
+    <tr>
+      <td class="tabla-dia-mi-numero">1</td>
+      <td class="tabla-dia-mi-evento">02 Junio 2024</td>
+      <td class="tabla-dia-mi-descripcion">Enfrentamientos amistoso Fénix GM Pádel Club</td>
+    </tr>
+    <tr>
+      <td class="tabla-dia-mi-numero">1</td>
+      <td class="tabla-dia-mi-evento">02 Junio 2024</td>
+      <td class="tabla-dia-mi-descripcion">Enfrentamientos amistoso Fénix GM Pádel Club</td>
+    </tr>
+    <tr>
+      <td class="tabla-dia-mi-numero">1</td>
+      <td class="tabla-dia-mi-evento">02 Junio 2024</td>
+      <td class="tabla-dia-mi-descripcion">Enfrentamientos amistoso Fénix GM Pádel Club</td>
+    </tr>
+  </tbody>
+    
+  </table>
+</div>
+
+<div class="texto-zona-cursos">
+  FLEKIS - CURSOS
+</div>
+<div class="row">
+  <div class="card">
+    <img src="css/imagen/card-1.jpg" alt="Imagen de la tarjeta" />
+    <div class="card-text">
+      <h3>CLASES/CURSOS DE PÁDEL</h3>
+      <p>
+        Descubre todos los cursos de pádel que nuestros entrenadores han
+        preparado para tí
+      </p>
+      <a href="#" class="btn-comprar">ENTRAR</a>
+    </div>
+  </div>
+
+
+
+  <div class="card">
+    <img src="css/imagen/card-2.jpg" alt="Imagen de la tarjeta" />
+    <div class="card-text">
+      <h3>NUTRICIÓN</h3>
+      <p>
+        Descubre todos los consejos que tienen para tí nuestros expertos
+        nutricionistas deportivos
+      </p>
+      <a href="#" class="btn-comprar">ENTRAR</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="css/imagen/card-3.jpg" alt="Imagen de la tarjeta" />
+    <div class="card-text">
+      <h3>RESERVA DE PISTAS</h3>
+      <p>
+        ¿Aún no tienes pistas reservadas para jugar? Entra y reserva pista
+      </p>
+      <a href="#" class="btn-comprar">ENTRAR</a>
+    </div>
+  </div>
+</div>
+
+<div class="texto-zona-yoconmiequipo">
+  <p>#yoconmiequipo</p>
+</div>
 
   <footer class="footer">
     <div class="container grid grid--footer-cols">
