@@ -297,6 +297,7 @@ li {
 .tarjeta-informacion {
   width: 23rem;
   text-align: left;
+  align-items: center;
   display: none;
   position: absolute;
   background-color: #f2eb32;
@@ -306,6 +307,15 @@ li {
   top: 50%; 
   left: 50%; 
   transform: translate(-50%, -50%); 
+}
+
+.inscripcion-entreno,
+.inscripcion-torneos,
+.inscripcion-ligas{
+  background-color: #620062;
+  color: #f2f5f3;
+  cursor: pointer;
+  align-items: center;
 }
 
 .dia-con-entrenos:hover .tarjeta-informacion {
@@ -319,6 +329,11 @@ li {
 .dia-con-ligas:hover .tarjeta-informacion {
   display: block;
 }
+
+.formulario-inscripcion {
+  display: none;
+}
+
 
 /* Estilo de la barra de desplazamiento del calendario */
 

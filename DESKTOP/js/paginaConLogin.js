@@ -14,3 +14,25 @@ document.addEventListener("DOMContentLoaded", function() {
   // Mostrar la siguiente imagen automáticamente cada intervalTime milisegundos
   setInterval(showNextImage, intervalTime);
 });
+
+
+// Formulario de inscripción
+
+// Obtener todos los botones de inscripción
+const botonesInscripcion = document.querySelectorAll(".inscripcion-entreno, .inscripcion-torneos, .inscripcion-ligas");
+
+// Obtener el formulario de inscripción
+const formularioInscripcion = document.getElementById("formulario-inscripcion");
+
+// Función para mostrar el formulario
+function mostrarFormulario() {
+  formularioInscripcion.style.display = "block";
+}
+
+// Añadir evento de clic a cada botón de inscripción
+botonesInscripcion.forEach(boton => {
+  boton.addEventListener("click", mostrarFormulario);
+});
+
+
+
