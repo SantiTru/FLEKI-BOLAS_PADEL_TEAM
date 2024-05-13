@@ -16,23 +16,57 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// Formulario de inscripción
+document.addEventListener("DOMContentLoaded", function() {
+  // Obtener referencias a todos los botones "Inscribirme" con diferentes clases
+  var inscripcionEntrenoButtons = document.querySelectorAll(".inscripcion-entreno");
+  var inscripcionTorneosButtons = document.querySelectorAll(".inscripcion-torneos");
+  var inscripcionLigasButtons = document.querySelectorAll(".inscripcion-ligas");
 
-// Obtener todos los botones de inscripción
-const botonesInscripcion = document.querySelectorAll(".inscripcion-entreno, .inscripcion-torneos, .inscripcion-ligas");
+  // Función para mostrar el formulario de inscripción
+  function mostrarFormulario() {
+      document.getElementById("modal").style.display = "block";
+  }
 
-// Obtener el formulario de inscripción
-const formularioInscripcion = document.getElementById("formulario-inscripcion");
+  // Agregar controladores de eventos a los botones "Inscribirme" de entrenos
+  inscripcionEntrenoButtons.forEach(function(button) {
+      button.addEventListener("click", mostrarFormulario);
+  });
 
-// Función para mostrar el formulario
-function mostrarFormulario() {
-  formularioInscripcion.style.display = "block";
-}
+  // Agregar controladores de eventos a los botones "Inscribirme" de torneos
+  inscripcionTorneosButtons.forEach(function(button) {
+      button.addEventListener("click", mostrarFormulario);
+  });
 
-// Añadir evento de clic a cada botón de inscripción
-botonesInscripcion.forEach(boton => {
-  boton.addEventListener("click", mostrarFormulario);
+  // Agregar controladores de eventos a los botones "Inscribirme" de ligas
+  inscripcionLigasButtons.forEach(function(button) {
+      button.addEventListener("click", mostrarFormulario);
+  });
+
+  // Agregar un controlador de eventos al botón de cierre para ocultar el formulario
+  var closeButton = document.querySelector(".cerrar-modal");
+  if (closeButton) {
+      closeButton.addEventListener("click", function() {
+          document.getElementById("modal").style.display = "none";
+      });
+  } else {
+      console.error("No se encontró el botón de cierre.");
+  }
+
+  // Agregar un controlador de eventos al formulario para prevenir el comportamiento predeterminado cuando se envía
+  var form = document.querySelector("#modal form");
+  if (form) {
+      form.addEventListener("submit", function(event) {
+          event.preventDefault();
+          // Aquí puedes agregar la lógica para enviar el formulario
+          // Por ejemplo, puedes realizar una petición AJAX al servidor
+          // o simplemente mostrar un mensaje de éxito
+          console.log("Formulario enviado");
+      });
+  } else {
+      console.error("No se encontró el formulario.");
+  }
 });
+
 
 
 
