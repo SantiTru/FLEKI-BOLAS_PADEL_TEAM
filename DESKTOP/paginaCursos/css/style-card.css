@@ -21,14 +21,14 @@
   }
 
 .card-header-1 {
-  background-image: url(/DESKTOP/css/imagen/imagen-zona-4.jpg);
+  background-image: url(./imagenes/imagen-zona-7-3.jpg);
   height: 174px;
   width: 320px;
   color: #fff;
 
 }
 .card-header-2 {
-  background-image: url(../imagen/tamaño_imagen_2.jpg);
+  background-image: url(./imagenes/card-3.jpg);
   height: 174px;
   width: 320px;
   color: #fff;
@@ -36,7 +36,7 @@
 }
 
 .card-header-3 {
-  background-image: url(../imagen/tamaño_imagen_3.jpg);
+  background-image: url(./imagenes/carrusel-1.jpg);
   height: 174px;
   width: 320px;
   color: #fff;

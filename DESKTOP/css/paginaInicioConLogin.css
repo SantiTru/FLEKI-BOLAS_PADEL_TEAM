@@ -419,7 +419,10 @@ li {
   cursor: pointer;
 }
 
-
+.texto-formulario{
+  font-size: 12px;
+  text-align: center;
+}
 
 
 /* Estilo para la fleki - agenda */
