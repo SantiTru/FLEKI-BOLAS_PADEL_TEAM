@@ -22,6 +22,8 @@
 
 .card-header-1 {
   background-image: url(./imagenes/imagen-zona-7-3.jpg);
+  background-size: cover;
+  background-position: center;
   height: 174px;
   width: 320px;
   color: #fff;
@@ -29,6 +31,8 @@
 }
 .card-header-2 {
   background-image: url(./imagenes/card-3.jpg);
+  background-size: cover;
+  background-position: center;
   height: 174px;
   width: 320px;
   color: #fff;
@@ -37,6 +41,8 @@
 
 .card-header-3 {
   background-image: url(./imagenes/carrusel-1.jpg);
+  background-size: cover;
+  background-position: center;
   height: 174px;
   width: 320px;
   color: #fff;
@@ -44,7 +50,9 @@
 }
 
 .card-header-4 {
-  background-image: url(../imagen/tamaño_imagen_4.jpg);
+  background-image: url(./imagenes/carrusel-2.jpg);
+  background-size: cover;
+  background-position: center;
   height: 174px;
   width: 320px;
   color: #fff;
@@ -52,7 +60,9 @@
 }
 
 .card-header-5 {
-  background-image: url(../imagen/tamaño_imagen_5.jpg);
+  background-image: url(./imagenes/carrusel-3.jpg);
+  background-size: cover;
+  background-position: center;
   height: 174px;
   width: 320px;
   color: #fff;
@@ -60,7 +70,9 @@
 }
 
 .card-header-6 {
-  background-image: url(../imagen/tamaño_imagen_6.jpg);
+  background-image: url(./imagenes/imagen-zona-4.jpg);
+  background-size: cover;
+  background-position: center;
   height: 174px;
   width: 320px;
   color: #fff;
@@ -68,7 +80,9 @@
 }
 
 .card-header-7{
-  background-image: url(../imagen/tamaño_imagen_7.jpg);
+  background-image: url(./imagenes/imagen-zona-7-2.jpg);
+  background-size: cover;
+  background-position: center;
   height: 174px;
   width: 320px;
   color: #fff;
@@ -76,7 +90,49 @@
 }
 
 .card-header-8 {
-  background-image: url(../imagen/tamaño_imagen_8.jpg);
+  background-image: url(./imagenes/imagen-zona-7-1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 174px;
+  width: 320px;
+  color: #fff;
+
+}
+
+.card-header-9 {
+  background-image: url(./imagenes/pista-1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 174px;
+  width: 320px;
+  color: #fff;
+
+}
+
+.card-header-10 {
+  background-image: url(./imagenes/pista-2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 174px;
+  width: 320px;
+  color: #fff;
+
+}
+
+.card-header-11{
+  background-image: url(./imagenes/pista-3.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 174px;
+  width: 320px;
+  color: #fff;
+
+}
+
+.card-header-12 {
+  background-image: url(./imagenes/card-3.jpg);
+  background-size: cover;
+  background-position: center;
   height: 174px;
   width: 320px;
   color: #fff;

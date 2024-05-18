@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="css/style-card.css" />
   <link rel="stylesheet" href="css/querys.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/carrito.css" />
+
+  <script src="./js/carrito.js"></script>
 
 </head>
 <div>
@@ -40,13 +43,39 @@
         CESTA
       </div>
       <div class="icono-usuario">
-        <svg xmlns="http://www.w3.org/2000/svg" width="62" height="55" viewBox="0 0 62 55" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="62" height="55" viewBox="0 0 62 55" fill="none" id="img-carrito">
           <path
             d="M18.36 54.5884C16.9533 54.5884 15.7677 54.1665 14.8033 53.3226C13.8388 52.4787 13.3577 51.4423 13.36 50.2134C13.3622 48.9845 13.8433 47.9472 14.8033 47.1013C15.7677 46.2594 16.9533 45.8384 18.36 45.8384C19.7666 45.8384 20.9511 46.2594 21.9133 47.1013C22.8755 47.9433 23.3577 48.9806 23.36 50.2134C23.3622 51.4462 22.88 52.4826 21.9133 53.3226C20.9466 54.1626 19.7622 54.5845 18.36 54.5884ZM49.64 54.5884C48.2355 54.5884 47.0511 54.1665 46.0866 53.3226C45.1222 52.4787 44.64 51.4423 44.64 50.2134C44.64 48.9845 45.1222 47.9472 46.0866 47.1013C47.0511 46.2594 48.2355 45.8384 49.64 45.8384C51.0444 45.8384 52.23 46.2594 53.1966 47.1013C54.1588 47.9452 54.64 48.9826 54.64 50.2134C54.64 51.4423 54.1588 52.4787 53.1966 53.3226C52.2322 54.1665 51.0466 54.5884 49.64 54.5884ZM11.9733 6.12508H61.72L47.8266 28.3384H21L15.5366 37.0884H54.64V40.0051H9.80329L18.95 25.7134L6.69329 3.20841H0.666626V0.291748H8.80663L11.9733 6.12508Z"
             fill="#201600" />
         </svg>
       </div>
     </div>
+
+    <ul>
+      <li class="submenu">
+        <div id="carrito" class="carrito" >
+
+          <table id="lista-carrito" class="u-full-width">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <div id="total-carrito" class="total-carrito">
+            
+          </div>
+          <div class="carrito-cerrar-vaciar">
+            <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+            <br>
+            <button id="cerrar-carrito" class="cerrar-carrito-btn">Cerrar</button>
+          </div>
+        </div>
+      </li>
+    </ul>
   </nav>
 
 
@@ -57,10 +86,11 @@
 
   <!--Zona cursos-->
   <div class="texto-titulo">
-    <p class="title-cards">¿Quieres aprender a jugar a pádel o mejorar tu técnica? Mira los diferentes niveles que
-      tenemos</p>
+    <p class="title-cards">¿Quieres aprender a jugar a pádel o mejorar tu técnica?</p>
+    <p class="title-cards">Entra y descubre todo lo que te ofrecemos</p>
+
     <br><br>
-    <p class="title-subcards"> Nivel Principiantes</p>
+    <h2 class="title-subcards"> Clases de pádel por <p class="title-subcards-underline">niveles</p></h2>
   </div>
 
   <section class="container-cards">
@@ -68,23 +98,23 @@
     <div class="card">
       <div class="card-header-1"></div>
       <div class="card-body">
-        <p class="card-title">Pádel Básico</p>
+        <p class="card-title">Pádel Nivel Básico</p>
         <br>
-        <p class="card-author"><b>Victor Robles</b></p>
-        <p>Aprende JavaScript con NodeJS</p>
+        <p class="card-author"><b>Rodri Ovide</b></p>
+        <p>Empieza desde cero</p>
         <br>
         <div class="card-icons">
           <div class="card-icons-thumb">
             <ion-icon name="thumbs-up"></ion-icon>
-            <p>00k</p>
+            <p>5k</p>
           </div>
           <div class="card-icons-like">
             <ion-icon name="heart"></ion-icon>
-            <p>00k</p>
+            <p>2k</p>
           </div>
         </div>
         <br>
-        <p class="card-precio">Precio: 19.99€</p>
+        <p class="card-precio">Precio: 20€/persona</p>
       </div>
       <div class="card-footer">
         <nav class="nav-col">
@@ -98,23 +128,23 @@
     <div class="card">
       <div class="card-header-2"></div>
       <div class="card-body">
-        <p class="card-title">Pádel Básico</p>
+        <p class="card-title">Pádel Nivel Intermedio</p>
         <br>
-        <p class="card-author"><b>Victor Robles</b></p>
-        <p>Aprende JavaScript con NodeJS</p>
+        <p class="card-author"><b>Manu Martón</b></p>
+        <p>Consigue mejor técnica con este curso</p>
         <br>
         <div class="card-icons">
           <div class="card-icons-thumb">
             <ion-icon name="thumbs-up"></ion-icon>
-            <p>00k</p>
+            <p>10k</p>
           </div>
           <div class="card-icons-like">
             <ion-icon name="heart"></ion-icon>
-            <p>00k</p>
+            <p>8k</p>
           </div>
         </div>
         <br>
-        <p class="card-precio">Precio: 19.99€</p>
+        <p class="card-precio">Precio: 21€/persona</p>
       </div>
       <div class="card-footer">
         <nav class="nav-col">
@@ -128,23 +158,23 @@
     <div class="card">
       <div class="card-header-3"></div>
       <div class="card-body">
-        <p class="card-title">Pádel Básico</p>
+        <p class="card-title">Pádel Nivel Intermedio</p>
         <br>
-        <p class="card-author"><b>Victor Robles</b></p>
-        <p>Aprende JavaScript con NodeJS</p>
+        <p class="card-author"><b>Rodri Ovide</b></p>
+        <p>Consigue trucos de ataque y defensa con este curso</p>
         <br>
         <div class="card-icons">
           <div class="card-icons-thumb">
             <ion-icon name="thumbs-up"></ion-icon>
-            <p>00k</p>
+            <p>7k</p>
           </div>
           <div class="card-icons-like">
             <ion-icon name="heart"></ion-icon>
-            <p>00k</p>
+            <p>3k</p>
           </div>
         </div>
         <br>
-        <p class="card-precio">Precio: 19.99€</p>
+        <p class="card-precio">Precio: 21€/persona</p>
       </div>
       <div class="card-footer">
         <nav class="nav-col">
@@ -158,23 +188,23 @@
     <div class="card">
       <div class="card-header-4"></div>
       <div class="card-body">
-        <p class="card-title">Pádel Básico</p>
+        <p class="card-title">Pádel Nivel Avanzado</p>
         <br>
-        <p class="card-author"><b>Victor Robles</b></p>
-        <p>Aprende JavaScript con NodeJS</p>
+        <p class="card-author"><b>Carlos Ponzoni</b></p>
+        <p>Eleva tu nivel de pádel hasta lo más alto con este curso</p>
         <br>
         <div class="card-icons">
           <div class="card-icons-thumb">
             <ion-icon name="thumbs-up"></ion-icon>
-            <p>00k</p>
+            <p>11k</p>
           </div>
           <div class="card-icons-like">
             <ion-icon name="heart"></ion-icon>
-            <p>00k</p>
+            <p>9k</p>
           </div>
         </div>
         <br>
-        <p class="card-precio">Precio: 19.99€</p>
+        <p class="card-precio">Precio: 22€/persona</p>
       </div>
       <div class="card-footer">
         <nav class="nav-col">
@@ -189,30 +219,33 @@
 
 
 
-<!--Segunda Fila Card-->
+<!--Segunda Fila Card / Clases Pádel-->
+
+<h2 class="title-subcards"> Cursos <p class="title-subcards-underline">online</p> para aprender técnicas y estrategias </h2>
+
 
 <section class="container-cards-two">
 
   <div class="card">
     <div class="card-header-5"></div>
     <div class="card-body">
-      <p class="card-title">Pádel Básico</p>
+      <p class="card-title">Masterclass de Estrategias Avanzadas en Pádel</p>
       <br>
-      <p class="card-author"><b>Victor Robles</b></p>
-      <p>Aprende JavaScript con NodeJS</p>
+      <p class="card-author"><b>Manu Martin</b></p>
+      <p>Aprende con Manu estrategias para tus partidos</p>
       <br>
       <div class="card-icons">
         <div class="card-icons-thumb">
           <ion-icon name="thumbs-up"></ion-icon>
-          <p>00k</p>
+          <p>12k</p>
         </div>
         <div class="card-icons-like">
           <ion-icon name="heart"></ion-icon>
-          <p>00k</p>
+          <p>30k</p>
         </div>
       </div>
       <br>
-      <p class="card-precio">Precio: 19.99€</p>
+      <p class="card-precio">Precio: 60€</p>
     </div>
     <div class="card-footer">
       <nav class="nav-col">
@@ -226,23 +259,23 @@
   <div class="card">
     <div class="card-header-6"></div>
     <div class="card-body">
-      <p class="card-title">Pádel Básico</p>
+      <p class="card-title">Pádel Pro: Técnicas y Posicionamiento en la Pista</p>
       <br>
-      <p class="card-author"><b>Victor Robles</b></p>
-      <p>Aprende JavaScript con NodeJS</p>
+      <p class="card-author"><b>Jorge Martínez</b></p>
+      <p>¿Quieres aprender posicionamiento en pista para ganar tus partidos?</p>
       <br>
       <div class="card-icons">
         <div class="card-icons-thumb">
           <ion-icon name="thumbs-up"></ion-icon>
-          <p>00k</p>
+          <p>21k</p>
         </div>
         <div class="card-icons-like">
           <ion-icon name="heart"></ion-icon>
-          <p>00k</p>
+          <p>15k</p>
         </div>
       </div>
       <br>
-      <p class="card-precio">Precio: 19.99€</p>
+      <p class="card-precio">Precio: 65€</p>
     </div>
     <div class="card-footer">
       <nav class="nav-col">
@@ -256,19 +289,19 @@
   <div class="card">
     <div class="card-header-7"></div>
     <div class="card-body">
-      <p class="card-title">Pádel Básico</p>
+      <p class="card-title">Mejora Tu Juego de Pádel: Curso de Estrategias</p>
       <br>
-      <p class="card-author"><b>Victor Robles</b></p>
-      <p>Aprende JavaScript con NodeJS</p>
+      <p class="card-author"><b>Gaby Checa</b></p>
+      <p>Mejora tu juego con estrategias para el equipo</p>
       <br>
       <div class="card-icons">
         <div class="card-icons-thumb">
           <ion-icon name="thumbs-up"></ion-icon>
-          <p>00k</p>
+          <p>10k</p>
         </div>
         <div class="card-icons-like">
           <ion-icon name="heart"></ion-icon>
-          <p>00k</p>
+          <p>10k</p>
         </div>
       </div>
       <br>
@@ -286,10 +319,48 @@
   <div class="card">
     <div class="card-header-8"></div>
     <div class="card-body">
-      <p class="card-title">Pádel Básico</p>
+      <p class="card-title">Dominando la Posición en la Pista de Pádel</p>
       <br>
-      <p class="card-author"><b>Victor Robles</b></p>
-      <p>Aprende JavaScript con NodeJS</p>
+      <p class="card-author"><b>Manu Martín</b></p>
+      <p>Aprende a dominir la posición tuya y de tu pareja para ser invencibles</p>
+      <br>
+      <div class="card-icons">
+        <div class="card-icons-thumb">
+          <ion-icon name="thumbs-up"></ion-icon>
+          <p>14k</p>
+        </div>
+        <div class="card-icons-like">
+          <ion-icon name="heart"></ion-icon>
+          <p>11k</p>
+        </div>
+      </div>
+      <br>
+      <p class="card-precio">Precio: 50€</p>
+    </div>
+    <div class="card-footer">
+      <nav class="nav-col">
+        <ul class="comprar-nav">
+          <li><button class="boton-comprar">COMPRAR</button></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<!--Tercera Fila Card / Reserva pista -->
+
+<h2 class="title-subcards"> Reserva <p class="title-subcards-underline">pistas</p> en nuestro club</h2>
+
+
+<section class="container-cards-three">
+
+  <div class="card">
+    <div class="card-header-9"></div>
+    <div class="card-body">
+      <p class="card-title">Pista 1 - Fénix</p>
+      <br>
+      <p class="card-author"><b></b></p>
+      <p></p>
       <br>
       <div class="card-icons">
         <div class="card-icons-thumb">
@@ -302,7 +373,97 @@
         </div>
       </div>
       <br>
-      <p class="card-precio">Precio: 19.99€</p>
+      <p class="card-precio">Precio: 20.80€</p>
+    </div>
+    <div class="card-footer">
+      <nav class="nav-col">
+        <ul class="comprar-nav">
+          <li><button class="boton-comprar">COMPRAR</button></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header-10"></div>
+    <div class="card-body">
+      <p class="card-title">Pista 2 - Fleki</p>
+      <br>
+      <p class="card-author"><b></b></p>
+      <p></p>
+      <br>
+      <div class="card-icons">
+        <div class="card-icons-thumb">
+          <ion-icon name="thumbs-up"></ion-icon>
+          <p>00k</p>
+        </div>
+        <div class="card-icons-like">
+          <ion-icon name="heart"></ion-icon>
+          <p>00k</p>
+        </div>
+      </div>
+      <br>
+      <p class="card-precio">Precio: 20.80€</p>
+    </div>
+    <div class="card-footer">
+      <nav class="nav-col">
+        <ul class="comprar-nav">
+          <li><button class="boton-comprar">COMPRAR</button></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header-11"></div>
+    <div class="card-body">
+      <p class="card-title">Pista 3 - Casas Nuevas </p>
+      <br>
+      <p class="card-author"><b></b></p>
+      <p></p>
+      <br>
+      <div class="card-icons">
+        <div class="card-icons-thumb">
+          <ion-icon name="thumbs-up"></ion-icon>
+          <p>00k</p>
+        </div>
+        <div class="card-icons-like">
+          <ion-icon name="heart"></ion-icon>
+          <p>00k</p>
+        </div>
+      </div>
+      <br>
+      <p class="card-precio">Precio: 20.80€</p>
+    </div>
+    <div class="card-footer">
+      <nav class="nav-col">
+        <ul class="comprar-nav">
+          <li><button class="boton-comprar">COMPRAR</button></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header-12"></div>
+    <div class="card-body">
+      <p class="card-title">Pista 4 - Lo de Jorge</p>
+      <br>
+      <p class="card-author"><b></b></p>
+      <p></p>
+      <br>
+      <div class="card-icons">
+        <div class="card-icons-thumb">
+          <ion-icon name="thumbs-up"></ion-icon>
+          <p>00k</p>
+        </div>
+        <div class="card-icons-like">
+          <ion-icon name="heart"></ion-icon>
+          <p>00k</p>
+        </div>
+      </div>
+      <br>
+      <p class="card-precio">Precio: 20.80€</p>
     </div>
     <div class="card-footer">
       <nav class="nav-col">
