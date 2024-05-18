@@ -164,7 +164,7 @@
 }
 
 .card-precio {
-  color: #285686;
+  color: #8d12c9;
   font-weight: 600;
 }
 
@@ -176,7 +176,7 @@ ul {
 }
 
 .boton-comprar {
-  background-color: #428bca;
+  background-color: #f2eb32;
   color: #fff;
   font-size: 18px;
   padding: 10px 15px;
@@ -188,7 +188,7 @@ ul {
 }
 
 .boton-comprar:hover {
-  background-color: #337ab7;
+  background-color: #8d12c9;
 }
 
 .card-title{
