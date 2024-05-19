@@ -122,6 +122,13 @@ body {
   color: #f2eb32;
 }
 
+a.link {
+  text-decoration: none; /* Elimina la línea de subrayado */
+}
+
+
+
+
 /* Estilos para el menú de navegación */
 .navegacion {
   display: flex;

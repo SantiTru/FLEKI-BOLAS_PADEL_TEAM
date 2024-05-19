@@ -96,3 +96,7 @@ button:hover {
 #login-link-btn:hover {
   background-color: #F2EB32;
 }
+
+a.link{
+  text-decoration: none;
+}
