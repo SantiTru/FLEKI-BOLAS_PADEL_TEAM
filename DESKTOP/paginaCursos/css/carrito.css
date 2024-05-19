@@ -17,6 +17,7 @@
   border-radius: 0.9rem;
   margin-top: 7rem;
   margin-right: 4rem;
+  z-index: 1;
 }
 
 .submenu {
@@ -53,7 +54,7 @@ th,
 td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid #8d12c9;
 }
 
 tbody {
