@@ -1,47 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Search by Diet Type</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../DESKTOP/css/paginaInicioConLogin.css">
+    <link rel="stylesheet" href="../DESKTOP/paginaCursos/css/style-card.css">
+    <link rel="stylesheet" href="../DESKTOP/paginaCursos/css/querys.css">
+    <link rel="stylesheet" href="../DESKTOP/paginaCursos/css/style.css">
+    <link rel="stylesheet" href="../DESKTOP/paginaCursos/css/carrito.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
 </head>
+
 <body>
-    <h1>Buscar Recetas por Tipo de Dieta y Macronutrientes</h1>
-    <form id="searchForm">
-        <label for="diet">Tipo de Dieta:</label>
-        <select id="diet" name="diet">
-            <option value="">Cualquier Dieta</option>
-            <option value="vegetarian">Vegetariana</option>
-            <option value="vegan">Vegana</option>
-            <option value="glutenFree">Sin Gluten</option>
-            <option value="ketogenic">Ketogénica</option>
-            <option value="paleo">Paleo</option>
-        </select>
+    <div>
+        <nav class="navegacion">
+            <div class="header">
+                <a href="../DESKTOP/paginaInicioConLogin.html">
+                    <div class="logo-fleki">
+                        <img src="../DESKTOP/css/imagen/logo-fleki.png" alt="logo-fleki" class="logo-fleki">
+                    </div>
+                </a>
+                <div class="fleki-bolas-padel-team">
+                    FLEKI-BOLAS PÁDEL TEAM
+                </div>
+                <div class="sobre-el-equipo">
+                    SOBRE EL EQUIPO
+                </div>
+                <div class="contacto">
+                    CONTACTO
+                </div>
+                <div class="carrito">
+                    CESTA
+                </div>
+                <div class="icono-usuario">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="62" height="55" viewBox="0 0 62 55" fill="none" id="img-carrito">
+                        <path d="M18.36 54.5884C16.9533 54.5884 15.7677 54.1665 14.8033 53.3226C13.8388 52.4787 13.3577 51.4423 13.36 50.2134C13.3622 48.9845 13.8433 47.9472 14.8033 47.1013C15.7677 46.2594 16.9533 45.8384 18.36 45.8384C19.7666 45.8384 20.9511 46.2594 21.9133 47.1013C22.8755 47.9433 23.3577 48.9806 23.36 50.2134C23.3622 51.4462 22.88 52.4826 21.9133 53.3226C20.9466 54.1626 19.7622 54.5845 18.36 54.5884ZM49.64 54.5884C48.2355 54.5884 47.0511 54.1665 46.0866 53.3226C45.1222 52.4787 44.64 51.4423 44.64 50.2134C44.64 48.9845 45.1222 47.9472 46.0866 47.1013C47.0511 46.2594 48.2355 45.8384 49.64 45.8384C51.0444 45.8384 52.23 46.2594 53.1966 47.1013C54.1588 47.9452 54.64 48.9826 54.64 50.2134C54.64 51.4423 54.1588 52.4787 53.1966 53.3226C52.2322 54.1665 51.0466 54.5884 49.64 54.5884ZM11.9733 6.12508H61.72L47.8266 28.3384H21L15.5366 37.0884H54.64V40.0051H9.80329L18.95 25.7134L6.69329 3.20841H0.666626V0.291748H8.80663L11.9733 6.12508Z" fill="#201600"></path>
+                    </svg>
+                </div>
+            </div>
+        </nav>
 
-        <label for="minProtein">Proteínas mínimas (g):</label>
-        <input type="number" id="minProtein" name="minProtein">
+        <h1>Buscar Recetas por Tipo de Dieta y Macronutrientes</h1>
+        <br>
+        <form id="searchForm">
+            <div class="form-container">
+                <div class="form-card">
+                    <h3>Tipo de Dieta:</h3>
+                    <select id="diet" name="diet">
+                        <option value="">Cualquier Dieta</option>
+                        <option value="vegetarian">Vegetariana</option>
+                        <option value="vegan">Vegana</option>
+                        <option value="glutenFree">Sin Gluten</option>
+                        <option value="ketogenic">Ketogénica</option>
+                        <option value="paleo">Paleo</option>
+                    </select>
+                </div>
 
-        <label for="maxProtein">Proteínas máximas (g):</label>
-        <input type="number" id="maxProtein" name="maxProtein">
+                <div class="form-card">
+                    <h3>Proteínas mínimas (g):</h3>
+                    <input type="number" id="minProtein" name="minProtein">
+                </div>
 
-        <label for="minFat">Grasas mínimas (g):</label>
-        <input type="number" id="minFat" name="minFat">
+                <div class="form-card">
+                    <h3>Proteínas máximas (g):</h3>
+                    <input type="number" id="maxProtein" name="maxProtein">
+                </div>
 
-        <label for="maxFat">Grasas máximas (g):</label>
-        <input type="number" id="maxFat" name="maxFat">
+                <div class="form-card">
+                    <h3>Grasas mínimas (g):</h3>
+                    <input type="number" id="minFat" name="minFat">
+                </div>
 
-        <label for="minCarbs">Carbohidratos mínimos (g):</label>
-        <input type="number" id="minCarbs" name="minCarbs">
+                <div class="form-card">
+                    <h3>Grasas máximas (g):</h3>
+                    <input type="number" id="maxFat" name="maxFat">
+                </div>
 
-        <label for="maxCarbs">Carbohidratos máximos (g):</label>
-        <input type="number" id="maxCarbs" name="maxCarbs">
+                <div class="form-card">
+                    <h3>Carbohidratos mínimos (g):</h3>
+                    <input type="number" id="minCarbs" name="minCarbs">
+                </div>
 
-        <button type="submit">Buscar Recetas</button>
-    </form>
+                <div class="form-card">
+                    <h3>Carbohidratos máximos (g):</h3>
+                    <input type="number" id="maxCarbs" name="maxCarbs">
+                </div>
 
-    <div id="results"></div>
+                <button type="submit">Buscar Recetas</button>
+            </div>
+        </form>
+
+        <div id="results"></div>
+
+        <footer class="footer">
+            <div class="container grid grid--footer-cols">
+                <div class="logo-col">
+                    <a href="#" class="footer-logo"><img class="logo" src="../DESKTOP/css/imagen/logo-fleki.png" alt="logo equis"></a>
+                    <p class="copyright">Copyright &copy; 2024 Cristina Conde y Santiago Trujillo, Inc. All rights reserved.
+                    </p>
+                </div>
+                <div class="address-col">
+                    <p class="footer-heading">Contacta con nosotros</p>
+                    <address class="contacts">
+                        <p class="address">
+                            C. Frederick Terman, 3, Campanillas,<br>29590 Málaga
+                        </p>
+                        <p>
+                            <a class="footer-link" href="tel:687-425-789">Tlfn: 687-425-789</a>
+                            <br>
+                            <a class="footer-link" href="email@email.com">flekibolas.padelteram@gmail.com</a>
+                        </p>
+                    </address>
+                </div>
+                <nav class="nav-col">
+                    <p class="footer-heading">Categorias</p>
+                    <ul class="footer-nav">
+                        <li><a class="footer-link" href="#">Cursos y clases de pádel</a></li>
+                        <li><a class="footer-link" href="#">Alquiler de pistas</a></li>
+                        <li><a class="footer-link" href="#">Asesoramiento en nutrición</a></li>
+                    </ul>
+                </nav>
+                <nav class="nav-col">
+                    <p class="footer-heading">Idioma</p>
+                    <ul class="footer-nav">
+                        <li><button class="idioma-boton">Español</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
+    <script src="../DESKTOP/paginaCursos/js/carrito.js"></script>
 </body>
+
 </html>
+

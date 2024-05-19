@@ -1,0 +1,112 @@
+/****************************************/
+/* ATOMS - PERSONALITY CONSISTENCY  SYSTEM*/
+/****************************************/
+/*
+     /*
+            SPACING SYSTEM (px)
+            2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+            FONT SIZE SYSTEM (px)
+            10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+            MAIN COLOR: #ebcc49
+            GREY FOR TEXT: #424242
+        */
+
+/* ------------------------ */
+/* GLOBAL/UNIVERSAL STYLES */
+/* ------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------ */
+/* GENERAL/REUSABLE STYLES */
+/* ------------------------ */
+html {
+    font-size: 62.5%;
+    /*con esto 1rem equivalen a 10px*/
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    background-color: #f3f2f1;
+}
+
+/* ------------------------ */
+/* COMPONENT STYLES -  */
+/* ------------------------ */
+
+/*--------------- BARRA DE NAVEGACION ---------------*/
+
+
+
+
+
+/*--------------- SECTION CARDS ---------------*/
+
+.title-cards {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 15px;
+    
+}
+
+.title-subcards{
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.2;
+}
+
+.title-subcards-underline{
+    text-decoration: underline;
+    text-underline-offset: .4rem;
+    text-decoration-color: #8d12c9;
+    display: inline;
+}
+
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50rem; 
+    justify-content: center;
+    gap: 5rem;
+    margin-bottom: 10rem;
+    align-items: center;
+}
+
+.container-cards-two {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50rem; 
+    justify-content: center;
+    gap: 5rem;
+    margin-bottom: 10rem;
+    align-items: center;
+}
+
+
+.container-cards-three{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50rem; 
+    justify-content: center;
+    gap: 5rem;
+    margin-bottom: 20rem;
+    align-items: center; 
+}
+
+
