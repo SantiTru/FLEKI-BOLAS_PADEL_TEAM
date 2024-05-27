@@ -95,6 +95,18 @@ return new serviciosResource($servicios);
             return response()->json(['message' => 'No se pudo actualizar', 'error' => $e->getMessage()], 500);
         }
     }
+
+    public function enroll(Request $request, $id) {
+        $servicio = Servicio::findOrFail($id);
+        $request->user()->servicios()->attach($servicio);
+        return redirect()->route('servicios.index')->with('success', 'Inscrito con éxito');
+    }
+    
+    public function myServices(Request $request) {
+        $servicios = $request->user()->servicios;
+        return view('servicios.my_services', compact('servicios'));
+    }
+    
    
 
 
