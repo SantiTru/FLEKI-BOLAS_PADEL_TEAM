@@ -12,6 +12,6 @@ class serviciosSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Servicio::create(['name' => 'Sesión de Entrenamiento', 'description' => 'Entrenamiento profesional', 'tipo_servicio_id' => 1]);
     }
 }
