@@ -1,17 +1,28 @@
 <?php
-
 namespace Database\Seeders;
+
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use App\Models\Task;
 
-class serviciosSeeder extends Seeder
+
+class ServiciosSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        Servicio::create(['name' => 'Sesión de Entrenamiento', 'description' => 'Entrenamiento profesional', 'tipo_servicio_id' => 1]);
+        DB::table('tareas')->insert([
+            'titulo' => 'PHP project',
+            'descripcion' => 'Proyecto en Laravel'
+        ]);
+        DB::table('tareas')->insert([
+            'titulo' => 'JavaScrip',
+            'descripcion' => 'Realización carrito de comprar'
+        ]);
+        DB::table('tareas')->insert([
+            'titulo' => 'Figma',
+            'descripcion' => 'Creación prototipo página web'
+        ]);
     }
 }
