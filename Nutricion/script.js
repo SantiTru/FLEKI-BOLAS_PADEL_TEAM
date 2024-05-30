@@ -2,23 +2,13 @@ document.getElementById("searchForm").addEventListener("submit", function(event)
     event.preventDefault();
 
     const diet = document.getElementById("diet").value;
-    const minProtein = document.getElementById("minProtein").value;
-    const maxProtein = document.getElementById("maxProtein").value;
-    const minFat = document.getElementById("minFat").value;
-    const maxFat = document.getElementById("maxFat").value;
-    const minCarbs = document.getElementById("minCarbs").value;
-    const maxCarbs = document.getElementById("maxCarbs").value;
+    const ingredients = document.getElementById("ingredients").value;
 
     const apiKey = "8c1207e4e4cd4095b3673d788992c549";
     let apiURL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}`;
 
     if (diet) apiURL += `&diet=${diet}`;
-    if (minProtein) apiURL += `&minProtein=${minProtein}`;
-    if (maxProtein) apiURL += `&maxProtein=${maxProtein}`;
-    if (minFat) apiURL += `&minFat=${minFat}`;
-    if (maxFat) apiURL += `&maxFat=${maxFat}`;
-    if (minCarbs) apiURL += `&minCarbs=${minCarbs}`;
-    if (maxCarbs) apiURL += `&maxCarbs=${maxCarbs}`;
+    if (ingredients) apiURL += `&includeIngredients=${encodeURIComponent(ingredients)}`;
 
     fetch(apiURL)
         .then(response => {
@@ -115,51 +105,4 @@ function showRecipeDetails(recipe, recipeId) {
         <p class="detail-title">Información Nutricional:</p>
         <div class="detail-content">${nutrientsHtml}</div>
     `;
-}
-
-document.getElementById('searchForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    clearErrors();
-
-    const minProtein = document.getElementById('minProtein').value;
-    const maxProtein = document.getElementById('maxProtein').value;
-    const minFat = document.getElementById('minFat').value;
-    const maxFat = document.getElementById('maxFat').value;
-    const minCarbs = document.getElementById('minCarbs').value;
-    const maxCarbs = document.getElementById('maxCarbs').value;
-
-    let valid = true;
-
-    if (minProtein && maxProtein && parseInt(minProtein) > parseInt(maxProtein)) {
-        showError('maxProtein', 'Las proteínas máximas deben ser mayores o iguales a las proteínas mínimas.');
-        valid = false;
-    }
-
-    if (minFat && maxFat && parseInt(minFat) > parseInt(maxFat)) {
-        showError('maxFat', 'Las grasas máximas deben ser mayores o iguales a las grasas mínimas.');
-        valid = false;
-    }
-
-    if (minCarbs && maxCarbs && parseInt(minCarbs) > parseInt(maxCarbs)) {
-        showError('maxCarbs', 'Los carbohidratos máximos deben ser mayores o iguales a los carbohidratos mínimos.');
-        valid = false;
-    }
-
-    if (valid) {
-        // Submit the form or perform the search
-        alert('Realizando búsqueda con los datos proporcionados...');
-    }
-});
-
-function showError(fieldId, message) {
-    const field = document.getElementById(fieldId);
-    const error = document.createElement('div');
-    error.className = 'error';
-    error.innerText = message;
-    field.parentElement.appendChild(error);
-}
-
-function clearErrors() {
-    const errors = document.querySelectorAll('.error');
-    errors.forEach(error => error.remove());
 }
