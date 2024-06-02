@@ -25,3 +25,4 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('logout', [AuthController::class, 'logout']);
     Route::resource('labels', tipoServiciosController::class);
 });
+
