@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Search by Diet Type</title>
+    <title>Cuida tu alimentación con Fleki</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -48,7 +48,8 @@
             </div>
         </nav>
 
-        <h1>Buscar Recetas por Tipo de Dieta y Macronutrientes</h1>
+        <h1>Buscador de recetas</h1>
+        <h3>Puedes encontrar recetas por tipo de dieta o ingredientes</h3>
         <br>
         <form id="searchForm">
             <div class="form-container">
@@ -65,40 +66,15 @@
                 </div>
 
                 <div class="form-card">
-                    <h3>Proteínas mínimas (g):</h3>
-                    <input type="number" id="minProtein" name="minProtein">
-                </div>
-
-                <div class="form-card">
-                    <h3>Proteínas máximas (g):</h3>
-                    <input type="number" id="maxProtein" name="maxProtein">
-                </div>
-
-                <div class="form-card">
-                    <h3>Grasas mínimas (g):</h3>
-                    <input type="number" id="minFat" name="minFat">
-                </div>
-
-                <div class="form-card">
-                    <h3>Grasas máximas (g):</h3>
-                    <input type="number" id="maxFat" name="maxFat">
-                </div>
-
-                <div class="form-card">
-                    <h3>Carbohidratos mínimos (g):</h3>
-                    <input type="number" id="minCarbs" name="minCarbs">
-                </div>
-
-                <div class="form-card">
-                    <h3>Carbohidratos máximos (g):</h3>
-                    <input type="number" id="maxCarbs" name="maxCarbs">
+                    <h3>Ingredientes: </h3>
+                    <input type="text" id="ingredients" name="ingredients" placeholder="(separados por comas) Ej: tomate, pollo, queso">
                 </div>
 
                 <button type="submit">Buscar Recetas</button>
             </div>
         </form>
 
-        <div id="results"></div>
+        <div id="results" class="results-grid"></div>
 
         <footer class="footer">
             <div class="container grid grid--footer-cols">
@@ -143,4 +119,3 @@
 </body>
 
 </html>
-
