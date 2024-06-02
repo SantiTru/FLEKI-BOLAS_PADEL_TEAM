@@ -6,7 +6,7 @@ import Section4 from './components/Section4';
 import Section5 from './components/Section5';
 import Section6 from './components/Section6';
 import Section7 from './components/Section7';
-import VideoSection from './components/VideoSection';
+import VideoSection from './components/Videosection';
 import Footer from './components/Footer';
 import './App.css';
 
