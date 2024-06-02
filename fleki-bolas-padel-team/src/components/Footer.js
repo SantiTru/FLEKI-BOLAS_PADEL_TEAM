@@ -8,21 +8,22 @@ const Footer = () => {
         <div className="row">
           <div className="col">
             <h3>Contacto</h3>
-            <p>Dirección: Calle Ejemplo, 123</p>
-            <p>Teléfono: +34 123 456 789</p>
-            <p>Email: info@ejemplo.com</p>
+            <p>Dirección: C. Frederick Terman, 3, Campanillas</p>
+            <p>29590 Málaga</p>
+            <p>Teléfono: +34 687-425-789</p>
+            <p>Email: flekibolas.padelteam@gmail.com</p>
           </div>
           <div className="col">
             <h3>Redes Sociales</h3>
-            <p>Facebook: @ejemplo</p>
-            <p>Twitter: @ejemplo</p>
-            <p>Instagram: @ejemplo</p>
+            <p>Facebook: @flekibolas</p>
+            <p>Twitter: @eflekibolas</p>
+            <p>Instagram: @flekibolas</p>
           </div>
           <div className="col">
-            <h3>Horario</h3>
-            <p>Lunes a Viernes: 9am - 9pm</p>
-            <p>Sábado: 10am - 6pm</p>
-            <p>Domingo: Cerrado</p>
+            <h3>Categorias</h3>
+            <p>Cursos y clases de pádel</p>
+            <p>Alquiler de pistas</p>
+            <p>Asesoramiento en nutrición</p>
           </div>
         </div>
       </div>

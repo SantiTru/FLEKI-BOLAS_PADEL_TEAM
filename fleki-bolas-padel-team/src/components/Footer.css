@@ -1,7 +1,13 @@
 /* Estilos para el footer */
 .footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+  font-size: 1rem;
+  padding: 4rem 2rem; 
+  background: linear-gradient(
+    180deg,
+    #f2f5f3 0%,
+    #c76dee 46.82%,
+    #8d12c9 87.78%
+  );
+  overflow: auto;
+  margin-top: 20rem;
 }
