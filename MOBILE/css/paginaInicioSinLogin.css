@@ -1,0 +1,536 @@
+/****************************************/
+/* ATOMS - PERSONALITY CONSISTENCY SYSTEM */
+/****************************************/
+/*
+   SPACING SYSTEM (px)
+   2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+   FONT SIZE SYSTEM (px)
+   10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+   MAIN COLOR: #ebcc49
+   GREY FOR TEXT: #424242
+*/
+
+/* ------------------------ */
+/* GLOBAL/UNIVERSAL STYLES */
+/* ------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem;
+}
+
+.u-margin-bottom-min{
+  margin-bottom: 0rem;
+}
+
+/* ------------------------ */
+/* GENERAL/REUSABLE STYLES */
+/* ------------------------ */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.8rem;
+  background-color: #f2f5f4;
+  min-height: 100vh; /* Para que el cuerpo ocupe toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column; /* Apilar los elementos verticalmente */
+}
+
+/* ------------------------ */
+/* COMPONENT STYLES */
+/* ------------------------ */
+
+/*--------------- BARRA DE NAVEGACION ---------------*/
+
+/* Estilos para el encabezado */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  font-weight: 900;
+}
+
+/* Estilos para el logo */
+.logo-fleki {
+  width: 8.5rem;
+  height: 8.1875rem;
+  position: relative;
+  left: 2rem;
+}
+
+/* Estilo para el logo usuario */
+.icono-usuario {
+  width: 6.3125rem;
+  height: 6.625rem;
+  cursor: pointer;
+}
+
+/* Estilos para el texto del equipo */
+.fleki-bolas-padel-team {
+  color: #002b09;
+  font-size: 1.8rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.fleki-bolas-padel-team:hover {
+  color: #f2eb32;
+}
+
+.sobre-el-equipo {
+  color: #002b09;
+  font-size: 1.8rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.sobre-el-equipo:hover {
+  color: #f2eb32;
+}
+
+.contacto {
+  color: #002b09;
+  font-size: 1.8rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.contacto:hover {
+  color: #f2eb32;
+}
+
+.accede-a-tu-cuenta {
+  color: #002b09;
+  font-size: 1.8rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.accede-a-tu-cuenta:hover {
+  color: #f2eb32;
+}
+
+a.link {
+  text-decoration: none; /* Elimina la línea de subrayado */
+}
+
+
+
+
+/* Estilos para el menú de navegación */
+.navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(
+    180deg,
+    #8d12c9 0%,
+    #c76dee 46.82%,
+    #f2f5f3 87.78%
+  );
+  width: 100%;
+}
+
+/* Estilo zona 1 */
+
+.contenedor-zona-1 {
+  width: 100%;
+  height: 100vh; /* Ocupa toda la ventana */
+  overflow: hidden;
+  margin-bottom: 7rem;
+}
+
+.imagen-zona-1-1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/*Estilo zona 2 */
+
+.imagen-zona-2-1 {
+  position: relative;
+  width: 30%;
+  height: 25rem;
+  max-width: 25%;
+  margin: auto;
+  left: 35%;
+  cursor: pointer;
+}
+
+/*Estilo zona 3 */
+
+.contenedor-zona-3 {
+  display: flex;
+  /* Distribuir el espacio entre los elementos */
+  align-items: center; /* Alinear los elementos en la parte inferior del contenedor */
+}
+
+.imagen-zona-3-1 img,
+.imagen-zona-3-2 img {
+  width: 48%; /* Establecer un ancho ligeramente menor para dejar espacio entre las imágenes */
+  height: auto;
+  cursor: pointer;
+  margin-left: 3rem;
+}
+
+.imagen-zona-3-3 {
+  width: 100%;
+  height: 5rem;
+  background-image: url("./imagen/bola-padel.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
+
+
+/* Estilo zona 4 */
+.contenedor-zona-4 {
+  display: flex;
+  width: 150rem;
+  height: 40rem;
+  margin-left: 2rem;
+  margin-bottom: 15rem;
+  margin-top: 2rem;
+  gap: 2rem;
+  
+}
+
+.imagen-zona-4-1 {
+  width: 50%;
+  /*left: 5rem;*/
+  /*top: -20rem;*/
+  /*z-index: 1; */
+  box-shadow: 0px 0px 50px #620062;
+}
+
+.contenedor-zona-4-2 {
+  display: grid;
+  flex-direction: column;
+  gap: 5rem;
+  margin-bottom: 1rem;
+}
+
+.contenedor-zona-4-texto {
+  width: 100%;
+  /*right: -10rem;*/
+  text-align: center;
+  /*top: -20rem;*/
+  /* z-index: 0;*/
+  letter-spacing: 1px;
+}
+
+.contenedor-zona-4-bis{
+  height: 10rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.imagen-zona-4-2 {
+  width: 30%;
+  height: 20rem;
+  /*position: relative;*/
+  /*left: 90rem;
+  top: -30rem;*/
+  margin-left: 40%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.imagen-zona-4-2:hover {
+  transform: scale(1.2);
+}
+
+/* Estilo zona 5 */
+
+.texto-zona-5 {
+  font-size: 4rem;
+  text-align: center;
+  color: #f2eb32;
+  background-color: #8d12c9;
+  padding: 2rem;
+  margin-bottom: 10rem;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/*Estilo zona 6 - card */
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.card {
+  width: 30%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-text {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.card-text h3 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.card-text p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.btn-comprar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #f2eb32;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background-color: #8d12c9;
+}
+
+/* Estilo zona 7 */
+
+.texto-zona-7 {
+  font-size: 4rem;
+  text-align: center;
+  color: #f2eb32;
+  background-color: #8d12c9;
+  padding: 2rem;
+  margin-top: 5rem;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.imagen-zona-7 {
+  display: flex;
+  align-items: center;
+}
+
+.imagen-zona-7-1 {
+  width: 50%;
+  height: 50rem;
+  position: relative;
+  z-index: -1;
+  box-shadow: 0px 0px 50px #620062;
+  margin-top: 5rem;
+  margin-left: 3rem;
+  border-radius: 2rem;
+}
+
+.texto-zona-7-1 {
+  font-size: 5rem;
+  color: #620062;
+  margin-top: 1rem;
+  margin-left: 10rem;
+  text-align: center;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ZONA VIDEO */
+
+.video-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.video {
+  position: relative;
+  width: 60%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-juampi {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.video-controls button {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/*--------------- FOOTER ---------------*/
+/*SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128*/
+footer {
+  font-size: 1.6rem;
+  padding: 4rem 2rem; /* Ajustar los valores de padding */
+  background: linear-gradient(
+    180deg,
+    #f2f5f3 0%,
+    #c76dee 46.82%,
+    #8d12c9 87.78%
+  );
+  overflow: auto;
+  margin-top: 20rem;
+}
+
+.grid--footer-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footer-heading {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #424242;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #ebcc49;
+}
+
+.logo {
+  width: 15rem;
+  height: 15rem;
+}
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.redes {
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-top: 1rem;
+  margin-right: 4rem;
+  background-color: #4242420b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #424242;
+  margin-top: auto;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.idioma-boton {
+  padding: 1.2rem 8rem 1.2rem 8rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  border: 2px solid #424242;
+  color: #424242;
+  border-radius: 0.5rem;
+  background-color: #4242420b;
+  cursor: pointer;
+}

@@ -1,0 +1,59 @@
+.App {
+  font-family: Arial, sans-serif;
+}
+
+.navegacion {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fleki-bolas-padel-team {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-fleki img {
+  height: 50px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.icono-usuario svg {
+  height: 50px;
+  cursor: pointer;
+}
+
+.contenedor-zona-1, .contenedor-zona-2, .contenedor-zona-4, .texto-zona-5, .row, .texto-zona-7, .video-container {
+  margin: 20px 0;
+}
+
+.imagen-zona-1-1, .imagen-zona-2-1, .imagen-zona-4-2, .video {
+  width: 100%;
+}
+
+.card {
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.card-text {
+  padding: 15px;
+}

@@ -1,0 +1,649 @@
+/****************************************/
+/* ATOMS - PERSONALITY CONSISTENCY SYSTEM */
+/****************************************/
+/*
+   SPACING SYSTEM (px)
+   2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+   FONT SIZE SYSTEM (px)
+   10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+   MAIN COLOR: #ebcc49
+   GREY FOR TEXT: #424242
+*/
+
+/* ------------------------ */
+/* GLOBAL/UNIVERSAL STYLES */
+/* ------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------------ */
+/* GENERAL/REUSABLE STYLES */
+/* ------------------------ */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.8rem;
+  background-color: #f2f5f4;
+  min-height: 100vh; /* Para que el cuerpo ocupe toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column; /* Apilar los elementos verticalmente */
+}
+
+/* ------------------------ */
+/* COMPONENT STYLES */
+/* ------------------------ */
+
+/*--------------- BARRA DE NAVEGACION ---------------*/
+
+/* Estilos para el encabezado */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  font-weight: 900;
+}
+
+/* Estilos para el logo */
+.logo-fleki {
+  width: 8.5rem;
+  height: 8.1875rem;
+  position: relative;
+  left: 2rem;
+}
+
+/* Estilo para el logo usuario */
+.icono-usuario {
+  width: 6.3125rem;
+  height: 6.625rem;
+  cursor: pointer;
+}
+
+/* Estilos para el texto del equipo */
+.fleki-bolas-padel-team {
+  color: #002b09;
+  font-size: 1.8rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.fleki-bolas-padel-team:hover {
+  color: #f2eb32;
+}
+
+.sobre-el-equipo {
+  color: #002b09;
+  font-size: 1.8rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.sobre-el-equipo:hover {
+  color: #f2eb32;
+}
+
+.contacto {
+  color: #002b09;
+  font-size: 1.8rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.contacto:hover {
+  color: #f2eb32;
+}
+
+.carrito {
+  color: #002b09;
+  font-size: 1.8rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.carrito:hover {
+  color: #f2eb32;
+}
+
+/* Estilo zona 1 */
+
+.contenedor-zona-1 {
+  position: relative;
+}
+
+.imagen-zona-1-1 {
+  position: absolute;
+  width: 100%;
+  height: 50rem;
+  max-width: 100%;
+  flex-shrink: 0;
+  opacity: 0.5;
+  top: 7rem;
+}
+
+.imagen-zona-1-2 {
+  position: relative;
+  width: 50%;
+  height: 70rem;
+  max-width: 50%;
+  flex-shrink: 0;
+  margin: auto;
+  top: 50%;
+  left: 25%;
+}
+
+/* Estilo zona 2 */
+
+.texto-zona-2 {
+  font-size: 4rem;
+  text-align: center;
+  color: #f2eb32;
+  background-color: #8d12c9;
+  padding: 2rem;
+  margin-bottom: 10rem;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Barra de búsqueda / zona 3 */
+
+.contenedor-busqueda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 700px;
+}
+
+#search-btn {
+  padding: 10px 20px;
+  background-color: #f2eb32;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#search-btn:hover {
+  background-color: #620062;
+}
+
+/* CALENDARIO */
+
+.calendario {
+  position: relative;
+  text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  /*width: 100%;*/
+  width: calc(100% + 30px);
+  height: 33rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mes {
+  width: 50rem;
+  flex-shrink: 0;
+  max-width: 45rem;
+  margin-right: 3rem;
+  margin-left: 2rem;
+}
+
+.calendario h1 {
+  grid-area: titulo;
+}
+
+ol {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 0;
+}
+
+li {
+  padding-top: 1rem;
+}
+
+.dias-semana {
+  background-color: #c76dee;
+  font-weight: 900;
+  text-align: center;
+}
+
+.primer-dia-febrero {
+  grid-column-start: 4;
+}
+
+.primer-dia-marzo {
+  grid-column-start: 5;
+}
+
+.primer-dia-abril {
+  grid-column-start: 1;
+}
+
+.primer-dia-mayo {
+  grid-column-start: 4;
+}
+
+.primer-dia-junio {
+  grid-column-start: 6;
+}
+
+.dia-con-entrenos {
+  position: relative;
+}
+
+.bola-entrenos {
+  width: 2rem;
+  height: auto;
+  position: absolute;
+  top: 60%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.dia-con-torneos {
+  position: relative;
+}
+
+.torneos {
+  width: 4rem;
+  height: auto;
+  position: absolute;
+  top: 60%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.dia-con-ligas {
+  position: relative;
+}
+
+.ligas {
+  width: 4rem;
+  height: auto;
+  position: absolute;
+  top: 60%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.tarjeta-informacion {
+  width: 23rem;
+  text-align: left;
+  align-items: center;
+  display: none;
+  position: absolute;
+  background-color: #f2eb32;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 9999;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
+
+.inscripcion-entreno,
+.inscripcion-torneos,
+.inscripcion-ligas{
+  background-color: #620062;
+  color: #f2f5f3;
+  cursor: pointer;
+  align-items: center;
+}
+
+.dia-con-entrenos:hover .tarjeta-informacion {
+  display: block;
+}
+
+.dia-con-torneos:hover .tarjeta-informacion {
+  display: block;
+}
+
+.dia-con-ligas:hover .tarjeta-informacion {
+  display: block;
+}
+
+.formulario-inscripcion {
+  display: none;
+}
+
+
+/* Estilo de la barra de desplazamiento del calendario */
+
+.calendario::-webkit-scrollbar {
+  height: 1rem;
+  z-index: -1;
+}
+
+.calendario::-webkit-scrollbar-thumb {
+  background-color: #f2eb32;
+  border-radius: 2rem;
+}
+
+.calendario::-webkit-scrollbar-track {
+  background-color: #8d12c9;
+  margin-top: 120px;
+}
+
+/* Estilo para leyenda calendario */
+
+.iconos{
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-left: 3rem;
+  margin-bottom: 5rem;
+}
+
+/*Estilo para el formulario de inscripción */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-contenido {
+  background-color: #f4f2f1;
+  margin: 15% auto;
+  padding: 3rem;
+  border: 3px solid #8d12c9;
+  width: 30%;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cerrar-modal {
+  color: #1b1b1b;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0rem;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.texto-encabezado-formulario{
+  text-transform: uppercase;
+  margin-top: 3rem;
+  letter-spacing: 2px;
+}
+
+.enviar{
+  width: 50%;
+  background-color: #8d12c9;
+}
+
+.enviar:hover{
+  background-color: #ebcc49;
+  cursor: pointer;
+}
+
+.texto-formulario{
+  font-size: 12px;
+  text-align: center;
+}
+
+
+/* Estilo para la fleki - agenda */
+
+.texto-zona-agenda {
+  font-size: 4rem;
+  text-align: center;
+  color: #f2eb32;
+  background-color: #8d12c9;
+  padding: 2rem;
+  margin-bottom: 5rem;
+  margin-top: 3rem;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.tabla-agenda{
+  display: flex;
+  gap:5rem;
+  width: 100%;
+  height: 50rem;
+  margin-left:auto;
+  margin-bottom: 10rem;
+}
+
+th, td{
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #f2eb32;
+  color: #2F4637;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #c76dee;
+}
+
+.carrusel{
+  width: 50%;
+  overflow: hidden;
+
+}
+
+
+.carrusel-imagen{
+  width: 100%;
+  position: relative;
+  margin-left: 3rem;
+}
+
+/*Estilo para los fleki - cursos */ 
+
+.texto-zona-cursos {
+  font-size: 4rem;
+  text-align: center;
+  color: #f2eb32;
+  background-color: #8d12c9;
+  padding: 2rem;
+  margin-bottom: 5rem;
+  margin-top: 10rem;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+/* Estilos para el menú de navegación */
+.navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(
+    180deg,
+    #8d12c9 0%,
+    #c76dee 46.82%,
+    #f2f5f3 87.78%
+  );
+  width: 100%;
+}
+
+/* Textp zona #yoconmiequipo */
+
+.texto-zona-yoconmiequipo {
+  font-size: 4rem;
+  text-align: center;
+  color: #f2eb32;
+  background-color: #8d12c9;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 10rem;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    180deg,
+    #8d12c9 0%,
+    #c76dee 50%,
+    #f2f5f3 80%
+  );
+  letter-spacing: 1px;
+}
+
+
+/*--------------- FOOTER ---------------*/
+/*SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128*/
+footer {
+  font-size: 1.6rem;
+  padding: 4rem 2rem; /* Ajustar los valores de padding */
+  background: linear-gradient(
+    180deg,
+    #f2f5f3 0%,
+    #c76dee 46.82%,
+    #8d12c9 87.78%
+  );
+  overflow: auto;
+  margin-top: 10rem;
+}
+
+.grid--footer-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footer-heading {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #424242;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #ebcc49;
+}
+
+.logo {
+  width: 15rem;
+  height: 15rem;
+}
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.redes {
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-top: 1rem;
+  margin-right: 4rem;
+  background-color: #4242420b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #424242;
+  margin-top: auto;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.idioma-boton {
+  padding: 1.2rem 8rem 1.2rem 8rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  border: 2px solid #424242;
+  color: #424242;
+  border-radius: 0.5rem;
+  background-color: #4242420b;
+  cursor: pointer;
+}
+
