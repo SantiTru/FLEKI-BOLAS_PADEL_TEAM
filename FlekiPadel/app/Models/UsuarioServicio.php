@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class UsuarioServicio extends Model
 {
@@ -20,11 +21,11 @@ class UsuarioServicio extends Model
 
     public function usuario()
     {
-        return $this->belongsTo(Usuario::class, 'Id_usuario', 'Id_usuario');
+        return $this->belongsTo(Usuario::class, 'Id_usuario');
     }
 
     public function servicio()
     {
-        return $this->belongsTo(Servicio::class, 'Id_servicio', 'Id_servicio');
+        return $this->belongsTo(Servicio::class, 'Id_servicio');
     }
 }

@@ -19,6 +19,11 @@ class Servicio extends Model
 
     public function tipoServicio()
     {
-        return $this->belongsTo(TipoServicio::class, 'Id_tipo_servicio', 'Id_tipo_servicio');
+        return $this->belongsTo(TipoServicio::class, 'Id_tipo_servicio');
+    }
+
+    public function usuarioServicios()
+    {
+        return $this->hasMany(UsuarioServicio::class, 'Id_servicio');
     }
 }

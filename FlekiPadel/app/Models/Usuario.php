@@ -18,4 +18,9 @@ class Usuario extends Model
         'Mail',
         'Contraseña',
     ];
+
+    public function usuarioServicios()
+    {
+        return $this->hasMany(UsuarioServicio::class, 'Id_usuario');
+    }
 }

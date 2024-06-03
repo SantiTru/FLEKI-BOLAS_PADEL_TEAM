@@ -17,4 +17,9 @@ class TipoServicio extends Model
         'Descripción_tipo',
         'Precio',
     ];
+
+    public function servicios()
+    {
+        return $this->hasMany(Servicio::class, 'Id_tipo_servicio');
+    }
 }
