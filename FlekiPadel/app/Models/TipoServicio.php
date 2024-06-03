@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class TipoServicio extends Model
 {
     use HasFactory;
+
+    protected $table = 'tipo_servicio';
+    protected $primaryKey = 'Id_tipo_servicio';
+
+    protected $fillable = [
+        'Nombre_tipo',
+        'Descripción_tipo',
+        'Precio',
+    ];
 }
