@@ -11,9 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('_usuario__servicio', function (Blueprint $table) {
-            $table->id();
+        Schema::create('usuario_servicio', function (Blueprint $table) {
+            $table->id('Id_usuario_servicio');
+            $table->unsignedBigInteger('Id_usuario');
+            $table->unsignedBigInteger('Id_servicio');
+            $table->date('Fecha_contratación');
             $table->timestamps();
+            
+            // Foreign key constraints
+            $table->foreign('Id_usuario')->references('Id_usuario')->on('usuario')->onDelete('cascade');
+            $table->foreign('Id_servicio')->references('Id_servicio')->on('servicio')->onDelete('cascade');
         });
     }
 
@@ -22,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('_usuario__servicio');
+        Schema::dropIfExists('usuario_servicio');
     }
 };

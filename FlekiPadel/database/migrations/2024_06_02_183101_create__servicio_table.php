@@ -11,9 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('_servicio', function (Blueprint $table) {
-            $table->id();
+        Schema::create('servicio', function (Blueprint $table) {
+            $table->id('Id_servicio');
+            $table->date('Fecha_evento');
+            $table->unsignedBigInteger('Id_tipo_servicio')->nullable();
             $table->timestamps();
+            
+            // Foreign key constraint
+            $table->foreign('Id_tipo_servicio')->references('Id_tipo_servicio')->on('tipo_servicio')->onDelete('set null');
         });
     }
 
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('_servicio');
+        Schema::dropIfExists('servicio');
     }
 };
