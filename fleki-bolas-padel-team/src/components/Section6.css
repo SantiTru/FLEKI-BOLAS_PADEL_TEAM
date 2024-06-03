@@ -1,6 +1,47 @@
 /* Estilos para las secciones */
 .section {
-  padding: 20px;
+  padding: 5px;
   background-color: #f9f9f9;
   text-align: center;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+  gap: 20px; /* Espacio entre columnas */
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-text {
+  padding: 15px;
+}
+
+.card-text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card-text p {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+.card:hover {
+  transform: scale(1.1);
 }

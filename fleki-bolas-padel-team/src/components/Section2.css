@@ -1,6 +1,20 @@
 /* Estilos para las secciones */
 .section {
-  padding: 20px;
+  padding: 0;
   background-color: #f9f9f9;
   text-align: center;
+  top: 2rem;
+}
+
+.contenedor-zona-2 {
+  display: flex;           
+  justify-content: center;
+  align-items: center;     
+  top: 2rem;
+}
+
+.imagen-zona-2-1 {
+  height: 15rem;
+  top: 2rem;
+  max-width: 100%;        
 }

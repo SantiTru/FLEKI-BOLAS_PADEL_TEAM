@@ -6,26 +6,28 @@ import './Section6.css';
 
 const Section6 = () => {
   return (
-    <div className="row">
-      <div className="card">
-        <img src={card1} alt="Imagen de la tarjeta" />
-        <div className="card-text">
-          <h3>CLASES/CURSOS DE PÁDEL</h3>
-          <p>Descubre todos los cursos de pádel que nuestros entrenadores han preparado para ti</p>
+    <div className="section">
+      <div className="row">
+        <div className="card">
+          <img src={card1} alt="Imagen de la tarjeta" />
+          <div className="card-text">
+            <h3>CLASES/CURSOS DE PÁDEL</h3>
+            <p>Descubre todos los cursos de pádel que nuestros entrenadores han preparado para ti</p>
+          </div>
         </div>
-      </div>
-      <div className="card">
-        <img src={card2} alt="Imagen de la tarjeta" />
-        <div className="card-text">
-          <h3>RESERVA DE PISTAS</h3>
-          <p>Podrás reservar pistas en el horario que mejor se ajuste a tus necesidades</p>
+        <div className="card">
+          <img src={card2} alt="Imagen de la tarjeta" />
+          <div className="card-text">
+            <h3>RESERVA DE PISTAS</h3>
+            <p>Podrás reservar pistas en el horario que mejor se ajuste a tus necesidades</p>
+          </div>
         </div>
-      </div>
-      <div className="card">
-        <img src={card3} alt="Imagen de la tarjeta" />
-        <div className="card-text">
-          <h3>EQUIPOS PARA LIGAS Y TORNEOS</h3>
-          <p>Forma parte de nuestros equipos para jugar ligas y torneos organizados</p>
+        <div className="card">
+          <img src={card3} alt="Imagen de la tarjeta" />
+          <div className="card-text">
+            <h3>EQUIPOS PARA LIGAS Y TORNEOS</h3>
+            <p>Forma parte de nuestros equipos para jugar ligas y torneos organizados</p>
+          </div>
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="navegacion">
       <div className="header">
         <div className="fleki-bolas-padel-team">FLEKI-BOLAS PÁDEL TEAM</div>
-        <div className="logo-fleki">
+        <div className="logo-fleki-container">
           <img src={logoFleki} alt="logo-fleki" className="logo-fleki" />
         </div>
         <a href="#zona-sobre-el-equipo" className="link">
