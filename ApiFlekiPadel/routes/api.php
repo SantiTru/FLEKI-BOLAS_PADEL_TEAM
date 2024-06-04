@@ -6,6 +6,7 @@ use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\TipoServicioController;
 use App\Http\Controllers\ServicioController;
 use App\Http\Controllers\UsuarioServicioController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,13 @@ Route::apiResource('usuarios', UsuarioController::class);
 Route::apiResource('tipos-servicio', TipoServicioController::class);
 Route::apiResource('servicios', ServicioController::class);
 Route::apiResource('usuarios-servicios', UsuarioServicioController::class);
+
+// Rutas de autenticación
+
+Route::post('register', [AuthController::class, 'register']);
+Route::post('login', [AuthController::class, 'login']);
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('me', [AuthController::class, 'me']);
+    Route::post('logout', [AuthController::class, 'logout']);
+});
