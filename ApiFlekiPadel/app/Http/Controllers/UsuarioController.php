@@ -16,7 +16,9 @@ class UsuarioController extends Controller
 
     public function store(UsuarioRequest $request)
     {
-        $usuario = Usuario::create($request->validated());
+        $data = $request->validated();
+        $data['Contraseña'] = bcrypt($data['Contraseña']);
+        $usuario = Usuario::create($data);
         return new UsuarioResource($usuario);
     }
 
