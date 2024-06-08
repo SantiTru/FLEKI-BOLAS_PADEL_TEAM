@@ -10,16 +10,21 @@ class TipoServicio extends Model
     use HasFactory;
 
     protected $table = 'tipo_servicio';
-    protected $primaryKey = 'Id_tipo_servicio';
+    protected $primaryKey = 'id_tipo_servicio';
 
     protected $fillable = [
-        'Nombre_tipo',
-        'Descripcion_tipo',
-        'Precio',
+        'nombre_tipo',
+        'descripcion_tipo',
+        'precio',
     ];
 
     public function servicios()
     {
-        return $this->hasMany(Servicio::class, 'Id_tipo_servicio');
+        return $this->hasMany(Servicio::class, 'id_tipo_servicio');
+    }
+
+    public function usuarioServicios()
+    {
+        return $this->hasManyThrough(UsuarioServicio::class, Servicio::class, 'id_tipo_servicio', 'id_servicio');
     }
 }

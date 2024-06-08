@@ -15,6 +15,8 @@ class TipoServicioFactory extends Factory
             'nombre_tipo' => $this->faker->word,
             'descripcion_tipo' => $this->faker->sentence,
             'precio' => $this->faker->randomFloat(2, 10, 100),
+            'created_at' => now(),
+            'updated_at' => now()
         ];
     }
 }

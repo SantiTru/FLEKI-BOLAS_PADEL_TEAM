@@ -14,15 +14,15 @@ class TipoServicioTest extends TestCase
     public function puede_crear_un_tipo_servicio()
     {
         $data = [
-            'nombre_tipo' => 'Clase de Padel',
-            'descripcion_tipo' => 'Clase de padel para principiantes',
-            'precio' => 20.00,
+            'nombre_tipo' => 'Clase de Padel Intermedia',
+            'descripcion_tipo' => 'Clase para nivel intermedio.',
+            'precio' => 40.00,
         ];
 
         $response = $this->postJson('/api/tipos-servicio', $data);
 
         $response->assertStatus(201);
-        $this->assertDatabaseHas('tipo_servicios', ['nombre_tipo' => 'Clase de Padel']);
+        $this->assertDatabaseHas('tipo_servicio', ['nombre_tipo' => 'Clase de Padel Intermedia']);
     }
 
     /** @test */
@@ -32,8 +32,17 @@ class TipoServicioTest extends TestCase
 
         $response = $this->getJson("/api/tipos-servicio/{$tipoServicio->id_tipo_servicio}");
 
+        //dd($response->json()); 
+
         $response->assertStatus(200);
-        $response->assertJson($tipoServicio->toArray());
+        $response->assertJson([
+            'data' => [
+                'id_tipo_servicio' => $tipoServicio->id_tipo_servicio,
+                'nombre_tipo' => $tipoServicio->nombre_tipo,
+                'descripcion_tipo' => $tipoServicio->descripcion_tipo,
+                'precio' => $tipoServicio->precio,
+            ]
+        ]);
     }
 
     /** @test */
@@ -43,14 +52,14 @@ class TipoServicioTest extends TestCase
 
         $data = [
             'nombre_tipo' => 'Clase avanzada de Padel',
-            'descripcion_tipo' => 'Clase avanzada para jugadores intermedios',
-            'precio' => 25.00,
+            'descripcion_tipo' => 'Clase para jugadores avanzados.',
+            'precio' => 60.00,
         ];
 
         $response = $this->putJson("/api/tipos-servicio/{$tipoServicio->id_tipo_servicio}", $data);
 
         $response->assertStatus(200);
-        $this->assertDatabaseHas('tipo_servicios', ['nombre_tipo' => 'Clase avanzada de Padel']);
+        $this->assertDatabaseHas('tipo_servicio', ['nombre_tipo' => 'Clase avanzada de Padel']);
     }
 
     /** @test */
@@ -61,6 +70,6 @@ class TipoServicioTest extends TestCase
         $response = $this->deleteJson("/api/tipos-servicio/{$tipoServicio->id_tipo_servicio}");
 
         $response->assertStatus(204);
-        $this->assertDeleted($tipoServicio);
+        $this->assertDatabaseMissing('tipo_servicio', ['id_tipo_servicio' => $tipoServicio->id_tipo_servicio]);
     }
 }

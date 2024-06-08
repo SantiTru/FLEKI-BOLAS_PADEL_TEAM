@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\UsuarioRequest;
-use App\Http\Resources\UsuarioResource;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
+use App\Http\Requests\UsuarioRequest;
 
 class UsuarioController extends Controller
 {
@@ -14,16 +13,9 @@ class UsuarioController extends Controller
         return Usuario::all();
     }
 
-    public function store(Request $request)
+    public function store(UsuarioRequest $request)
     {
-        $request->validate([
-            'nombre_usuario' => 'required',
-            'apellidos' => 'required',
-            'mail' => 'required|email|unique:usuarios,mail',
-            'contraseña' => 'required|min:6',
-        ]);
-
-        $usuario = Usuario::create($request->all());
+        $usuario = Usuario::create($request->validated());
 
         return response()->json($usuario, 201);
     }
@@ -33,16 +25,9 @@ class UsuarioController extends Controller
         return response()->json($usuario);
     }
 
-    public function update(Request $request, Usuario $usuario)
+    public function update(UsuarioRequest $request, Usuario $usuario)
     {
-        $request->validate([
-            'nombre_usuario' => 'required',
-            'apellidos' => 'required',
-            'mail' => 'required|email|unique:usuarios,mail,' . $usuario->id_usuario,
-            'contraseña' => 'required|min:6',
-        ]);
-
-        $usuario->update($request->all());
+        $usuario->update($request->validated());
 
         return response()->json($usuario);
     }

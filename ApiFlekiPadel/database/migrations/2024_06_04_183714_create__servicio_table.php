@@ -6,25 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('servicio', function (Blueprint $table) {
-            $table->id('Id_servicio');
-            $table->date('Fecha_evento');
-            $table->unsignedBigInteger('Id_tipo_servicio')->nullable();
+            $table->id('id_servicio');
+            $table->date('fecha_evento');
+            $table->unsignedBigInteger('id_tipo_servicio')->nullable();
+            $table->foreign('id_tipo_servicio')->references('id_tipo_servicio')->on('tipo_servicio');
             $table->timestamps();
-            
-            // Foreign key constraint
-            $table->foreign('Id_tipo_servicio')->references('Id_tipo_servicio')->on('tipo_servicio')->onDelete('set null');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('servicio');

@@ -14,21 +14,23 @@ class Usuario extends Model
     use HasFactory;
 
     protected $table = 'usuario';
-    protected $primaryKey = 'Id_usuario';
+
+    protected $primaryKey = 'id_usuario';
 
     protected $fillable = [
-        'Nombre_usuario',
-        'Apellidos',
-        'Mail',
-        'Contraseña',
+        'nombre_usuario',
+        'apellidos',
+        'mail',
+        'contraseña',
     ];
 
     protected $hidden = [
-        'Contraseña',
+        'contraseña',
     ];
+
 
     public function usuarioServicios()
     {
-        return $this->hasMany(UsuarioServicio::class, 'Id_usuario');
+        return $this->hasMany(UsuarioServicio::class, 'id_usuario');
     }
 }

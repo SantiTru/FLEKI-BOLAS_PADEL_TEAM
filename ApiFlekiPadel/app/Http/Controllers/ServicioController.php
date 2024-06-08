@@ -11,29 +11,32 @@ class ServicioController extends Controller
 {
     public function index()
     {
-        return ServicioResource::collection(Servicio::with('tipoServicio')->get());
+        return Servicio::all();
     }
 
     public function store(ServicioRequest $request)
     {
         $servicio = Servicio::create($request->validated());
-        return new ServicioResource($servicio);
+
+        return response()->json($servicio, 201);
     }
 
     public function show(Servicio $servicio)
     {
-        return new ServicioResource($servicio->load('tipoServicio'));
+        return response()->json($servicio);
     }
 
     public function update(ServicioRequest $request, Servicio $servicio)
     {
         $servicio->update($request->validated());
-        return new ServicioResource($servicio->load('tipoServicio'));
+
+        return response()->json($servicio);
     }
 
     public function destroy(Servicio $servicio)
     {
         $servicio->delete();
+
         return response()->json(null, 204);
     }
 }

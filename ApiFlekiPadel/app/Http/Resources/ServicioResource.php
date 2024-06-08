@@ -6,18 +6,14 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class ServicioResource extends JsonResource
 {
-    /**
-     * Transform the resource into an array.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array
-     */
     public function toArray($request)
     {
         return [
-            'Id_servicio' => $this->Id_servicio,
-            'Fecha_evento' => $this->Fecha_evento,
-            'Tipo_servicio' => new TipoServicioResource($this->whenLoaded('tipoServicio')),
+            'id_servicio' => $this->id_servicio,
+            'fecha_evento' => $this->fecha_evento,
+            'id_tipo_servicio' => $this->id_tipo_servicio,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
         ];
     }
 }

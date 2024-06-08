@@ -6,19 +6,15 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class UsuarioResource extends JsonResource
 {
-    /**
-     * Transform the resource into an array.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array
-     */
     public function toArray($request)
     {
         return [
-            'Id_usuario' => $this->Id_usuario,
-            'Nombre_usuario' => $this->Nombre_usuario,
-            'Apellidos' => $this->Apellidos,
-            'Mail' => $this->Mail,
+            'id_usuario' => $this->id_usuario,
+            'nombre_usuario' => $this->nombre_usuario,
+            'apellidos' => $this->apellidos,
+            'mail' => $this->mail,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
         ];
     }
 }

@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tipo_servicio', function (Blueprint $table) {
-            $table->id('Id_tipo_servicio');
-            $table->string('Nombre_tipo', 255);
-            $table->text('Descripcion_tipo')->nullable();
-            $table->decimal('Precio', 10, 2);
+            $table->id('id_tipo_servicio');
+            $table->string('nombre_tipo');
+            $table->text('descripcion_tipo')->nullable();
+            $table->decimal('precio', 10, 2);
             $table->timestamps();
         });
     }

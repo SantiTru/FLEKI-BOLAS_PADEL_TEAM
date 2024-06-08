@@ -23,7 +23,7 @@ class UsuarioTest extends TestCase
         $response = $this->postJson('/api/usuarios', $data);
 
         $response->assertStatus(201);
-        $this->assertDatabaseHas('usuarios', ['mail' => 'juan.perez@example.com']);
+        $this->assertDatabaseHas('usuario', ['mail' => 'juan.perez@example.com']);
     }
 
     /** @test */
@@ -52,7 +52,7 @@ class UsuarioTest extends TestCase
         $response = $this->putJson("/api/usuarios/{$usuario->id_usuario}", $data);
 
         $response->assertStatus(200);
-        $this->assertDatabaseHas('usuarios', ['nombre_usuario' => 'Carlos']);
+        $this->assertDatabaseHas('usuario', ['nombre_usuario' => 'Carlos']);
     }
 
     /** @test */
@@ -63,6 +63,7 @@ class UsuarioTest extends TestCase
         $response = $this->deleteJson("/api/usuarios/{$usuario->id_usuario}");
 
         $response->assertStatus(204);
-        $this->assertDeleted($usuario);
+
+        $this->assertDatabaseMissing('usuario', ['id_usuario' => $usuario->id_usuario]);
     }
 }

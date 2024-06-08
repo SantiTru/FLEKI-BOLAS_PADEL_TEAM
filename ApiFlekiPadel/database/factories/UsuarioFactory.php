@@ -16,7 +16,7 @@ class UsuarioFactory extends Factory
             'nombre_usuario' => $this->faker->name,
             'apellidos' => $this->faker->lastName,
             'mail' => $this->faker->unique()->safeEmail,
-            'contraseña' => bcrypt('password'), // Contraseña encriptada
+            'contraseña' => bcrypt('password'),
         ];
     }
 }

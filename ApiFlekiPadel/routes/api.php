@@ -27,7 +27,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiResource('usuarios', UsuarioController::class);
 Route::apiResource('tipos-servicio', TipoServicioController::class);
 Route::apiResource('servicios', ServicioController::class);
-Route::apiResource('usuarios-servicios', UsuarioServicioController::class);
+Route::apiResource('usuario-servicios', UsuarioServicioController::class);
 
 // Rutas de autenticación
 

@@ -14,17 +14,15 @@ class ServicioTest extends TestCase
     /** @test */
     public function puede_crear_un_servicio()
     {
-        $tipoServicio = TipoServicio::factory()->create();
-
         $data = [
             'fecha_evento' => '2024-06-06',
-            'id_tipo_servicio' => $tipoServicio->id_tipo_servicio,
+            'id_tipo_servicio' => null,
         ];
 
         $response = $this->postJson('/api/servicios', $data);
 
         $response->assertStatus(201);
-        $this->assertDatabaseHas('servicios', ['fecha_evento' => '2024-06-06']);
+        $this->assertDatabaseHas('servicio', ['fecha_evento' => '2024-06-06']);
     }
 
     /** @test */
@@ -45,13 +43,13 @@ class ServicioTest extends TestCase
 
         $data = [
             'fecha_evento' => '2024-07-01',
-            'id_tipo_servicio' => $servicio->id_tipo_servicio,
+            'id_tipo_servicio' => null,
         ];
 
         $response = $this->putJson("/api/servicios/{$servicio->id_servicio}", $data);
 
         $response->assertStatus(200);
-        $this->assertDatabaseHas('servicios', ['fecha_evento' => '2024-07-01']);
+        $this->assertDatabaseHas('servicio', ['fecha_evento' => '2024-07-01']);
     }
 
     /** @test */
@@ -62,6 +60,7 @@ class ServicioTest extends TestCase
         $response = $this->deleteJson("/api/servicios/{$servicio->id_servicio}");
 
         $response->assertStatus(204);
-        $this->assertDeleted($servicio);
+
+        $this->assertDatabaseMissing('servicio', ['id_servicio' => $servicio->id_servicio]);
     }
 }

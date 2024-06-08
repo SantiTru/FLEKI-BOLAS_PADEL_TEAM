@@ -14,9 +14,9 @@ class TipoServicioRequest extends FormRequest
     public function rules()
     {
         return [
-            'Nombre_tipo' => 'required|string|max:255',
-            'Descripcion_tipo' => 'nullable|string',
-            'Precio' => 'required|numeric|min:0'
+            'nombre_tipo' => 'required|string|max:255',
+            'descripcion_tipo' => 'nullable|string',
+            'precio' => 'required|numeric|min:0',
         ];
     }
 }

@@ -27,7 +27,7 @@ class UsuarioServicioTest extends TestCase
         $response = $this->postJson('/api/usuario-servicios', $data);
 
         $response->assertStatus(201);
-        $this->assertDatabaseHas('usuario_servicios', ['fecha_contratacion' => '2024-06-06']);
+        $this->assertDatabaseHas('usuario_servicio', ['fecha_contratacion' => '2024-06-06']);
     }
 
     /** @test */
@@ -47,13 +47,15 @@ class UsuarioServicioTest extends TestCase
         $usuarioServicio = UsuarioServicio::factory()->create();
 
         $data = [
+            'id_usuario' => $usuarioServicio->id_usuario,
+            'id_servicio' => $usuarioServicio->id_servicio,
             'fecha_contratacion' => '2024-07-01',
         ];
 
         $response = $this->putJson("/api/usuario-servicios/{$usuarioServicio->id_usuario_servicio}", $data);
 
         $response->assertStatus(200);
-        $this->assertDatabaseHas('usuario_servicios', ['fecha_contratacion' => '2024-07-01']);
+        $this->assertDatabaseHas('usuario_servicio', ['fecha_contratacion' => '2024-07-01']);
     }
 
     /** @test */
@@ -64,6 +66,6 @@ class UsuarioServicioTest extends TestCase
         $response = $this->deleteJson("/api/usuario-servicios/{$usuarioServicio->id_usuario_servicio}");
 
         $response->assertStatus(204);
-        $this->assertDeleted($usuarioServicio);
+        $this->assertDatabaseMissing('usuario_servicio', ['id_usuario_servicio' => $usuarioServicio->id_usuario_servicio]);
     }
 }

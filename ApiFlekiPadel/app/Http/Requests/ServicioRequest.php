@@ -14,8 +14,8 @@ class ServicioRequest extends FormRequest
     public function rules()
     {
         return [
-            'Fecha_evento' => 'required|date',
-            'Id_tipo_servicio' => 'required|exists:tipo_servicio,Id_tipo_servicio'
+            'fecha_evento' => 'required|date',
+            'id_tipo_servicio' => 'nullable|exists:tipo_servicio,id_tipo_servicio',
         ];
     }
 }

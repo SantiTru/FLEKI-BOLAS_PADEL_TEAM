@@ -10,20 +10,22 @@ class Servicio extends Model
     use HasFactory;
 
     protected $table = 'servicio';
-    protected $primaryKey = 'Id_servicio';
+
+    protected $primaryKey = 'id_servicio';
 
     protected $fillable = [
-        'Fecha_evento',
-        'Id_tipo_servicio',
+        'fecha_evento',
+        'id_tipo_servicio',
     ];
+
 
     public function tipoServicio()
     {
-        return $this->belongsTo(TipoServicio::class, 'Id_tipo_servicio');
+        return $this->belongsTo(TipoServicio::class, 'id_tipo_servicio');
     }
 
     public function usuarioServicios()
     {
-        return $this->hasMany(UsuarioServicio::class, 'Id_servicio');
+        return $this->hasMany(UsuarioServicio::class, 'id_servicio');
     }
 }

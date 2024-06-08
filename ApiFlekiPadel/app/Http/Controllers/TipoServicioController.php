@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\TipoServicioRequest;
-use App\Http\Resources\TipoServicioResource;
 use App\Models\TipoServicio;
 use Illuminate\Http\Request;
+use App\Http\Resources\TipoServicioResource;
 
 class TipoServicioController extends Controller
 {
@@ -14,9 +13,16 @@ class TipoServicioController extends Controller
         return TipoServicioResource::collection(TipoServicio::all());
     }
 
-    public function store(TipoServicioRequest $request)
+    public function store(Request $request)
     {
-        $tipoServicio = TipoServicio::create($request->validated());
+        $request->validate([
+            'nombre_tipo' => 'required|string|max:255',
+            'descripcion_tipo' => 'nullable|string',
+            'precio' => 'required|numeric',
+        ]);
+
+        $tipoServicio = TipoServicio::create($request->all());
+
         return new TipoServicioResource($tipoServicio);
     }
 
@@ -25,15 +31,23 @@ class TipoServicioController extends Controller
         return new TipoServicioResource($tipoServicio);
     }
 
-    public function update(TipoServicioRequest $request, TipoServicio $tipoServicio)
+    public function update(Request $request, TipoServicio $tipoServicio)
     {
-        $tipoServicio->update($request->validated());
+        $request->validate([
+            'nombre_tipo' => 'required|string|max:255',
+            'descripcion_tipo' => 'nullable|string',
+            'precio' => 'required|numeric',
+        ]);
+
+        $tipoServicio->update($request->all());
+
         return new TipoServicioResource($tipoServicio);
     }
 
     public function destroy(TipoServicio $tipoServicio)
     {
         $tipoServicio->delete();
+
         return response()->json(null, 204);
     }
 }

@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class TipoServicioSeeder extends Seeder
 {
@@ -15,14 +14,18 @@ class TipoServicioSeeder extends Seeder
     {
         DB::table('tipo_servicio')->insert([
             [
-                'Nombre_tipo' => 'Torneo',
-                'Descripcion_tipo' => 'Torneo Express',
-                'Precio' => 50.00
+                'nombre_tipo' => 'Clase Basica',
+                'descripcion_tipo' => 'Clase basica de padel.',
+                'precio' => 20.00,
+                'created_at' => now(),
+                'updated_at' => now()
             ],
             [
-                'Nombre_tipo' => 'Liga',
-                'Descripcion_tipo' => 'Fase Regular',
-                'Precio' => 200.00
+                'nombre_tipo' => 'Clase Avanzada',
+                'descripcion_tipo' => 'Clase avanzada de padel.',
+                'precio' => 40.00,
+                'created_at' => now(),
+                'updated_at' => now()
             ],
         ]);
     }
