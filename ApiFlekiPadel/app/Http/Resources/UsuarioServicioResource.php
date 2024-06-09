@@ -15,10 +15,10 @@ class UsuarioServicioResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'Id_usuario_servicio' => $this->Id_usuario_servicio,
-            'Usuario' => new UsuarioResource($this->whenLoaded('usuario')),
-            'Servicio' => new ServicioResource($this->whenLoaded('servicio')),
-            'Fecha_contratacion' => $this->Fecha_contratacion,
+            'id_usuario_servicio' => $this->id_usuario_servicio,
+            'Usuario' => new UsuarioResource($this->whenLoaded('Usuario')),
+            'servicio' => new ServicioResource($this->whenLoaded('servicio')),
+            'fecha_contratacion' => $this->fecha_contratacion,
         ];
     }
 }
