@@ -16,7 +16,7 @@ class CreateUsuarioServicioTable extends Migration
             $table->timestamps();
 
             // Foreign key constraints
-            $table->foreign('id_usuario')->references('id_usuario')->on('usuario')->onDelete('cascade');
+            $table->foreign('id_usuario')->references('id_usuario')->on('Usuario')->onDelete('cascade');
             $table->foreign('id_servicio')->references('id_servicio')->on('servicio')->onDelete('cascade');
         });
     }

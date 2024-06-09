@@ -5,62 +5,51 @@ namespace App\Http\Controllers;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Auth;
-use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
-    use HasApiTokens;
-
-    // Registro de usuario
     public function register(Request $request)
     {
-        $validatedData = $request->validate([
-            'Nombre_usuario' => 'required|string|max:255',
-            'Apellidos' => 'required|string|max:255',
-            'Mail' => 'required|string|email|max:255|unique:usuario',
-            'Contraseña' => 'required|string|min:8',
+        $request->validate([
+            'nombre_usuario' => 'required|string|max:255',
+            'apellidos' => 'required|string|max:255',
+            'mail' => 'required|string|email|max:255|unique:Usuario,mail',
+            'contraseña' => 'required|string|min:8|confirmed',
         ]);
 
-        $validatedData['Contraseña'] = Hash::make($validatedData['Contraseña']);
-
-        $user = Usuario::create($validatedData);
-
-        $token = $user->createToken('auth_token')->plainTextToken;
-
-        return response()->json([
-            'access_token' => $token,
-            'token_type' => 'Bearer',
+        $user = Usuario::create([
+            'nombre_usuario' => $request->nombre_usuario,
+            'apellidos' => $request->apellidos,
+            'mail' => $request->mail,
+            'contraseña' => bcrypt($request->contraseña),
         ]);
+
+        return response()->json($user, 201);
     }
 
-    // Inicio de sesión de usuario
     public function login(Request $request)
     {
-        if (!Auth::attempt($request->only('Mail', 'Contraseña'))) {
-            return response()->json(['message' => 'Datos incorrectos'], 401);
+        $request->validate([
+            'mail' => 'required|string|email',
+            'contraseña' => 'required|string',
+        ]);
+
+        $user = Usuario::where('mail', $request->mail)->first();
+
+        if (! $user || ! Hash::check($request->contraseña, $user->contraseña)) {
+            return response()->json(['error' => 'Las credenciales proporcionadas son incorrectas.'], 401);
         }
 
-        $user = Auth::user();
-        $token = $user->createToken('auth_token')->plainTextToken;
-
         return response()->json([
-            'access_token' => $token,
-            'token_type' => 'Bearer',
+            'token' => $user->createToken($request->device_name ?? 'default')->plainTextToken,
         ]);
     }
 
-    // Detalles del usuario autenticado
-    public function me(Request $request)
-    {
-        return $request->user();
-    }
-
-    // Cerrar sesión del usuario
     public function logout(Request $request)
     {
-        $request->user()->currentAccessToken()->delete();
+        $request->user()->tokens()->delete();
 
-        return response()->json(['message' => 'Sesión cerrada']);
+        return response()->json([], 204);
     }
 }

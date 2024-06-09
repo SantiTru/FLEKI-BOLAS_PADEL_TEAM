@@ -4,22 +4,32 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateUsuarioTable extends Migration
 {
-    public function up(): void
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
     {
-        Schema::create('usuario', function (Blueprint $table) {
+        Schema::create('Usuario', function (Blueprint $table) {
             $table->id('id_usuario');
-            $table->string('nombre_usuario', 255);
-            $table->string('apellidos', 255);
-            $table->string('mail', 255)->unique();
-            $table->string('contraseña', 255);
+            $table->string('nombre_usuario');
+            $table->string('apellidos');
+            $table->string('mail')->unique();
+            $table->string('contraseña');
             $table->timestamps();
         });
     }
 
-    public function down(): void
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
     {
-        Schema::dropIfExists('usuario');
+        Schema::dropIfExists('Usuario');
     }
-};
+}
