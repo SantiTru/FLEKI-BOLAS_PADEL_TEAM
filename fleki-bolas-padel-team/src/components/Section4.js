@@ -1,6 +1,6 @@
 import React from 'react';
 import pinchaAqui from '../assets/imagen/pincha aqui.png';
-import './Section4.css';
+import '../assets/css/Section4.css';
 
 const Section4 = () => {
   return (

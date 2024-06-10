@@ -202,3 +202,25 @@ ul {
   cursor: pointer;
 }
 
+/* Media query para pantallas de 1193px de ancho o menos */
+@media screen and (max-width: 1193px) {
+  .container-cards,
+  .container-cards-two,
+  .container-cards-three {
+    grid-template-columns: repeat(4, 1fr); /* Mostrar 4 tarjetas por fila */
+    gap: 3rem; /* Espacio entre las tarjetas */
+  }
+}
+
+/* Media query para pantallas de 865px de ancho o menos */
+@media screen and (max-width: 865px) {
+  .container-cards,
+  .container-cards-two,
+  .container-cards-three {
+    grid-template-columns: repeat(2, 1fr); /* Mostrar 2 tarjetas por fila */
+  }
+}
+
+/* Aquí van las reglas de estilo originales */
+/* ATOMS - PERSONALITY CONSISTENCY  SYSTEM */
+/* ... y el resto del código */

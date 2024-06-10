@@ -1,7 +1,35 @@
-/* Estilos para el footer */
 .footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+  font-size: 1rem;
+  padding: 4rem 2rem; 
+  background: linear-gradient(
+    180deg,
+    #f2f5f3 0%,
+    #c76dee 46.82%,
+    #8d12c9 87.78%
+  );
+  overflow: auto;
+  margin-top: 20rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col {
+  flex: 1 0 30%; /* Tamaño flexible con un mínimo del 30% del ancho */
+  margin: 0 10px; /* Márgenes entre columnas */
+}
+/* Media query para pantallas medianas */
+@media only screen and (max-width: 768px) {
+  .col {
+    flex-basis: 48%; /* Cambia a ancho del 48% en pantallas pequeñas */
+  }
+}
+
+/* Media query para pantallas pequeñas */
+@media only screen and (max-width: 480px) {
+  .col {
+    flex-basis: 100%; /* Cambia a ancho completo en pantallas más pequeñas */
+    margin: 10px 0; /* Ajusta los márgenes en pantallas más pequeñas */
+  }
 }

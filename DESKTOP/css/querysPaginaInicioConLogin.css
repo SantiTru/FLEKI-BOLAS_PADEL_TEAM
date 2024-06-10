@@ -1,0 +1,36 @@
+/* Estilos para hacer la página responsive */
+@media only screen and (max-width: 600px) {
+  .login-form {
+      width: 80%;
+  }
+}
+
+/* Estilos para el contenedor */
+#contenedor {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente fila si no caben en una sola fila */
+  justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor con espacio entre ellos */
+}
+
+/* Estilos para los elementos internos del contenedor */
+#contenedor > div {
+  flex: 1; /* Los elementos ocupan todo el espacio disponible horizontalmente */
+  margin: 10px; /* Margen entre los elementos */
+  padding: 20px; /* Relleno dentro de los elementos */
+  border: 1px solid #ccc; /* Borde para visualización */
+  border-radius: 5px; /* Bordes redondeados */
+  box-sizing: border-box; /* El padding y el borde se incluyen en el ancho y alto de los elementos */
+}
+
+/* Media query para dispositivos con un ancho máximo de 600px */
+@media only screen and (max-width: 600px) {
+  /* Estilos para el contenedor cuando la pantalla es más pequeña */
+  #contenedor {
+      flex-direction: column; /* Los elementos se apilan verticalmente */
+  }
+  
+  /* Estilos para los elementos internos del contenedor cuando la pantalla es más pequeña */
+  #contenedor > div {
+      width: calc(100% - 20px); /* Los elementos ocupan todo el ancho disponible, menos el margen */
+  }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import logoFleki from '../assets/imagen/logo-fleki.png';
-import './Navbar.css';
+import '../assets/css/Navbar.css';
 
 const Navbar = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import image2 from '../assets/imagen/imagen-zona-2.png';
-import './Section2.css';
+import '../assets/css/Section2.css';
 
 const Section2 = () => {
   return (

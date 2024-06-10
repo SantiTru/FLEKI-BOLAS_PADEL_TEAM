@@ -2,7 +2,7 @@ import React from 'react';
 import card1 from '../assets/imagen/card-1.jpg';
 import card2 from '../assets/imagen/card-2.jpg';
 import card3 from '../assets/imagen/card-3.jpg';
-import './Section6.css';
+import '../assets/css/Section6.css';
 
 const Section6 = () => {
   return (

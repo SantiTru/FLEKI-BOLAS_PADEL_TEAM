@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import videoSrc from '../assets/video/JUAMPIV2.mp4';
-import './VideoSection.css';
+import '../assets/css/VideoSection.css';
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(true); // Estado para controlar la reproducción del video
