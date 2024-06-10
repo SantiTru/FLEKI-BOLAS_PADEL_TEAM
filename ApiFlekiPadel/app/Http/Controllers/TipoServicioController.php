@@ -26,28 +26,31 @@ class TipoServicioController extends Controller
         return new TipoServicioResource($tipoServicio);
     }
 
-    public function show(TipoServicio $tipoServicio)
+    public function show($id)
     {
-        return new TipoServicioResource($tipoServicio);
+        $tipoServicio = TipoServicio::findOrFail($id);
+
+        return response()->json([
+            'data' => $tipoServicio
+        ], 200);
     }
 
-    public function update(Request $request, TipoServicio $tipoServicio)
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'nombre_tipo' => 'required|string|max:255',
-            'descripcion_tipo' => 'nullable|string',
-            'precio' => 'required|numeric',
-        ]);
-
+        $tipoServicio = TipoServicio::findOrFail($id);
+    
         $tipoServicio->update($request->all());
-
-        return new TipoServicioResource($tipoServicio);
+    
+        return response()->json([
+            'data' => $tipoServicio
+        ], 200);
     }
 
-    public function destroy(TipoServicio $tipoServicio)
+    public function destroy($id)
     {
+        $tipoServicio = TipoServicio::findOrFail($id);
         $tipoServicio->delete();
-
+    
         return response()->json(null, 204);
     }
 }

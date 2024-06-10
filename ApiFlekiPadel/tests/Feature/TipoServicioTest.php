@@ -32,8 +32,6 @@ class TipoServicioTest extends TestCase
 
         $response = $this->getJson("/api/tipos-servicio/{$tipoServicio->id_tipo_servicio}");
 
-        //dd($response->json()); 
-
         $response->assertStatus(200);
         $response->assertJson([
             'data' => [
@@ -49,15 +47,15 @@ class TipoServicioTest extends TestCase
     public function puede_actualizar_un_tipo_servicio()
     {
         $tipoServicio = TipoServicio::factory()->create();
-
+    
         $data = [
             'nombre_tipo' => 'Clase avanzada de Padel',
             'descripcion_tipo' => 'Clase para jugadores avanzados.',
             'precio' => 60.00,
         ];
-
+    
         $response = $this->putJson("/api/tipos-servicio/{$tipoServicio->id_tipo_servicio}", $data);
-
+    
         $response->assertStatus(200);
         $this->assertDatabaseHas('tipo_servicio', ['nombre_tipo' => 'Clase avanzada de Padel']);
     }
@@ -66,9 +64,9 @@ class TipoServicioTest extends TestCase
     public function puede_eliminar_un_tipo_servicio()
     {
         $tipoServicio = TipoServicio::factory()->create();
-
+    
         $response = $this->deleteJson("/api/tipos-servicio/{$tipoServicio->id_tipo_servicio}");
-
+    
         $response->assertStatus(204);
         $this->assertDatabaseMissing('tipo_servicio', ['id_tipo_servicio' => $tipoServicio->id_tipo_servicio]);
     }

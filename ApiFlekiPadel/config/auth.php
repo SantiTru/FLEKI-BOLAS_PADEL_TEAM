@@ -38,12 +38,12 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'usuarios',
+            'provider' => 'users',
         ],
-    
+
         'api' => [
             'driver' => 'sanctum',
-            'provider' => 'usuarios',
+            'provider' => 'users',
         ],
     ],
 
@@ -65,16 +65,17 @@ return [
     */
 
     'providers' => [
-        'usuarios' => [
+        'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\Usuario::class,
         ],
+    ],
 
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
-    ],
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -97,10 +98,9 @@ return [
 
     'passwords' => [
         'users' => [
-            'provider' => 'usuarios',
-            'table' => 'password_reset_tokens',
+            'provider' => 'users',
+            'table' => 'password_resets',
             'expire' => 60,
-            'throttle' => 60,
         ],
     ],
 

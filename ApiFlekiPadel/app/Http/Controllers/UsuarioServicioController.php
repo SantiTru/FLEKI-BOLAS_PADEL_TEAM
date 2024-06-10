@@ -15,7 +15,7 @@ class UsuarioServicioController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'id_usuario' => 'required|exists:usuario,id_usuario',
+            'id_usuario' => 'required|exists:Usuario,id_usuario',
             'id_servicio' => 'required|exists:servicio,id_servicio',
             'fecha_contratacion' => 'required|date',
         ]);
@@ -33,7 +33,7 @@ class UsuarioServicioController extends Controller
     public function update(Request $request, UsuarioServicio $usuarioServicio)
     {
         $request->validate([
-            'id_usuario' => 'required|exists:usuario,id_usuario',
+            'id_usuario' => 'required|exists:Usuario,id_usuario',
             'id_servicio' => 'required|exists:servicio,id_servicio',
             'fecha_contratacion' => 'required|date',
         ]);

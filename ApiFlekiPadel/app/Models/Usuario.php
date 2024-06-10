@@ -3,18 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Usuario extends Model
+class Usuario extends Authenticatable
 {
-    use HasFactory;
+    use HasApiTokens, HasFactory, Notifiable;
 
-    protected $table = 'usuario';
-
+    protected $table = 'Usuario';
     protected $primaryKey = 'id_usuario';
 
     protected $fillable = [
@@ -28,6 +25,10 @@ class Usuario extends Model
         'contraseña',
     ];
 
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['contraseña'] = bcrypt($password);
+    }
 
     public function usuarioServicios()
     {

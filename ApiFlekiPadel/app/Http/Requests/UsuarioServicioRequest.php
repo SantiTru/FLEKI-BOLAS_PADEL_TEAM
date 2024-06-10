@@ -14,9 +14,9 @@ class UsuarioServicioRequest extends FormRequest
     public function rules()
     {
         return [
-            'Id_usuario' => 'required|exists:usuario,Id_usuario',
-            'Id_servicio' => 'required|exists:servicio,Id_servicio',
-            'Fecha_contratacion' => 'required|date'
+            'id_usuario' => 'required|exists:Usuario,id_usuario',
+            'id_servicio' => 'required|exists:servicio,id_servicio',
+            'fecha_contratacion' => 'required|date'
         ];
     }
 }
