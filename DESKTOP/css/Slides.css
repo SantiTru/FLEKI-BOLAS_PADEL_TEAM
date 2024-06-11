@@ -1,0 +1,186 @@
+/*
+---00 WHITESPACE SYSTEM / ATOM
+
+    - Spaging system (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+---01 TYPOGRAPHY SYSTEM / ATOM
+    
+
+    - Font sizes (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/****************************************/
+/* HEADER */
+/****************************************/
+
+/****************************************/
+/* NAVIGATION */
+/****************************************/
+
+/****************************************/
+/* HERO SECTION*/
+/****************************************/
+
+/* CARRUSEL INICIO SECTION*/
+
+.inicio {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+.carrusel img {
+  width: 0%;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: all 2s ease;
+}
+.carrusel img:hover {
+  cursor: crosshair;
+  width: 60%;
+  opacity: 1;
+  filter: contrast(120%);
+  z-index: 1;
+  margin-left: -30px;
+  margin-top: -30px;
+  margin-bottom: -30px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+.carrusel {
+  width: 800px;
+  height: 430px;
+  display: flex;
+}
+.carrusel:hover .central {
+  width: 0%;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: all 2s ease;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.carrusel .central {
+  cursor: crosshair;
+  width: 60%;
+  opacity: 1;
+  filter: contrast(120%);
+  z-index: 1;
+  margin-left: -30px;
+  margin-top: -30px;
+  margin-bottom: -30px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+/****************************************/
+/* AS FEATURED IN SECTION */
+/****************************************/
+
+/****************************************/
+/* HOW IT WORKS SECTION*/
+/****************************************/
+
+/****************************************/
+/* MEALS SECTION*/
+/****************************************/
+
+/****************************************/
+/* TESTIMONIALS SECTION*/
+/****************************************/
+
+blockquote {
+  margin: 0;
+  position: relative;
+}
+
+.feedback {
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+}
+
+.feedback-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.feedback-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.feedback-item img {
+  width: 100%;
+  display: block;
+
+}
+
+/* Navegación de la galería */
+.feedback-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-button {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.nav-button > span {
+  font-size: 30px;
+}
+.nav-button:hover {
+  background-color: #005f5f;
+}
+.textoFeed {
+  text-align: center;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.813);  
+}
+
+.textoContainer {
+  position: absolute; 
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; 
+  padding: 10px; 
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.245);
+  background-color: rgba(240, 248, 255, 0.556);
+}
+
+/****************************************/
+/* PRICING SECTION*/
+/****************************************/
+
+/****************************************/
+/* PLAN DETAILS SUBSECTION*/
+/****************************************/
+
+/****************************************/
+/* FEATURE SUBSECTION*/
+/****************************************/
+
+/****************************************/
+/* CTA SECTION*/
+/****************************************/
+
+/****************************************/
+/* FOOTER SECTION */
+/****************************************/
