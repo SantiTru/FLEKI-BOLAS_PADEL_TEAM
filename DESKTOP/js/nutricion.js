@@ -1,8 +1,6 @@
 document.getElementById("searchForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    console.log("Formulario enviado");
-
     const diet = document.getElementById("diet").value;
     const ingredients = document.getElementById("ingredients").value;
 
@@ -12,8 +10,6 @@ document.getElementById("searchForm").addEventListener("submit", function(event)
     if (diet) apiURL += `&diet=${diet}`;
     if (ingredients) apiURL += `&includeIngredients=${encodeURIComponent(ingredients)}`;
 
-    console.log("URL de la API: ", apiURL);
-
     fetch(apiURL)
         .then(response => {
             if (!response.ok) {
@@ -22,12 +18,10 @@ document.getElementById("searchForm").addEventListener("submit", function(event)
             return response.json();
         })
         .then(data => {
-            console.log("Datos recibidos de la API: ", data);
             displayResults(data.results);
         })
         .catch(error => {
-            console.error("Error fetching data: ", error);
-            alert("Error al buscar recetas");
+            alert("Error al buscar recetas: " + error.message);
         });
 });
 
@@ -39,8 +33,6 @@ function displayResults(recipes) {
         resultsContainer.innerHTML = "<p>No se encontraron recetas.</p>";
         return;
     }
-
-    console.log("Mostrando recetas: ", recipes);
 
     recipes.forEach(recipe => {
         const recipeElement = document.createElement("div");
@@ -54,7 +46,6 @@ function displayResults(recipes) {
 
         const button = recipeElement.querySelector(".detail-button");
         button.addEventListener("click", function() {
-            console.log("Botón 'Ver Detalles' clicado para receta ID: ", recipe.id);
             loadRecipeDetails(recipe.id);
         });
     });
@@ -64,8 +55,6 @@ function loadRecipeDetails(recipeId) {
     const apiKey = "8c1207e4e4cd4095b3673d788992c549";
     const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}`;
 
-    console.log("Cargando detalles para receta ID: ", recipeId);
-
     fetch(url)
         .then(response => {
             if (!response.ok) {
@@ -74,18 +63,14 @@ function loadRecipeDetails(recipeId) {
             return response.json();
         })
         .then(data => {
-            console.log("Detalles de la receta recibidos: ", data);
             showRecipeDetails(data);
         })
         .catch(error => {
-            console.error("Error loading recipe details: ", error);
             alert("Error al cargar los detalles de la receta: " + error.message);
         });
 }
 
 function showRecipeDetails(recipe) {
-    console.log("Mostrando detalles de la receta: ", recipe);
-
     const ingredientsHtml = recipe.extendedIngredients && recipe.extendedIngredients.length > 0
         ? recipe.extendedIngredients.map(ingredient => `<li>${ingredient.original}</li>`).join("")
         : "<li>Información sobre ingredientes no disponible.</li>";
@@ -100,6 +85,7 @@ function showRecipeDetails(recipe) {
 
     const detailsHtml = `
         <div class="details-container">
+            <h2 class="detail-title">${recipe.title}</h2>
             <p class="detail-title">Ingredientes:</p>
             <ul>${ingredientsHtml}</ul>
             <p class="detail-title">Instrucciones:</p>
@@ -113,7 +99,6 @@ function showRecipeDetails(recipe) {
 }
 
 function showFullscreen(detailsHtml) {
-    console.log("Mostrando pantalla completa");
     const fullscreenDiv = document.createElement("div");
     fullscreenDiv.classList.add("fullscreen");
     fullscreenDiv.innerHTML = `
