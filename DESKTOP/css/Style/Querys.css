@@ -1,0 +1,44 @@
+/* rem and em do not depend on font size on media queries */
+/* instead, 1rem = 1 em = 16px*/
+/* rem => root font size relativo al body. 
+mientras que em es el current font size, relativo a su container padre*/
+/*como rem tiene algunos problemas en algunos navegadores cuando se usa
+con media queries, pues vamos a usar su homologo que es em*/
+
+/*
+      - Spaging system (px)
+        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      - Font sizes (px)
+        10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+*/
+
+/* <=1344px (smaller desktop)*/
+@media (max-width: 84em) {
+  /****************************************/
+  /* section hero */
+  /****************************************/
+  /* vale, el resto tiene un container de 1200px para que todos estén alineados
+      menos el hero, pues el hero cuando sea menor de 1300px, tbe le vamos a poner el mismo
+      width que los otros para que se vea alineados a los otros */
+  .hero {
+    max-width: 120rem;
+  }
+  /*el título del heading se ve super grande ocupando 4 líneas, vamos a hacer
+    que ocupe menos líneas, pues bajando el font-size*/
+  .heading-primary {
+    /*antes 5.2*/
+    font-size: 4.4rem;
+  }
+
+  /****************************************/
+  /* section testimonial */
+  /****************************************/
+  /*el diseño del grid de la galeria de imágenes de testimonios se rompe bastante
+  el tamaño, así que vamos a quitarle una columna al grid*/
+  .gallery {
+    /*antes 3 de 1 fr*/
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
