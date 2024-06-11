@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Servicios;
+use App\Models\UsuarioServicio;
 use Illuminate\Http\Request;
 
-class ServiciosController extends Controller
+class UsuarioServicioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class ServiciosController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Servicios $servicios)
+    public function show(UsuarioServicio $usuarioServicio)
     {
         //
     }
@@ -42,7 +42,7 @@ class ServiciosController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Servicios $servicios)
+    public function edit(UsuarioServicio $usuarioServicio)
     {
         //
     }
@@ -50,7 +50,7 @@ class ServiciosController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Servicios $servicios)
+    public function update(Request $request, UsuarioServicio $usuarioServicio)
     {
         //
     }
@@ -58,7 +58,7 @@ class ServiciosController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Servicios $servicios)
+    public function destroy(UsuarioServicio $usuarioServicio)
     {
         //
     }
