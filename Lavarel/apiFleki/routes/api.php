@@ -30,7 +30,11 @@ Route::apiResource('servicios', ServicioController::class);
 Route::apiResource('usuario-servicios', UsuarioServicioController::class);
 
 // Rutas de autenticación
-
-Route::post('register', [AuthController::class, 'register']);
+Route::post('/register', [AuthController::class, 'registro']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::middleware('auth:sanctum')->post('/logout', [AuthController::class, 'logout']);
+
+
+
+
+

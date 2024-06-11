@@ -16,21 +16,37 @@ class AuthController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function register(Request $request)
+    public function registro(Request $request)
     {
-        $user = User::create([
-            'name'=> $request->name,
-            'email'=> $request->email,
-            'password'=> Hash::make($request->password),
-        ]);
-
-
-        $token = $user->createToken('auth_token')->plainTextToken;
-        return response()->json(['data' => $user, 'acces_token'=> $token, 'token_type'=> 'Bearer']);
+        try {
+            // Crear un nuevo usuario
+            $user = User::create([
+                'name' => $request->input('name'),
+                'email' => $request->input('email'),
+                'password' => bcrypt($request->input('password'))
+            ]);
+     
+            $user->save();
+            
+            // Retornar el token de autenticación y la información del usuario
+            return [
+                'token' => $user->createToken('token')->plainTextToken,
+                'user' => $user
+            ];
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Error al registrar el usuario'], 500);
+        }
     }
-    public function logout(){
-        auth()->user()->tokens()->delete();
-        return ['message'=> 'Sesión cerrada correctamente'];
+    public function logout(Request $request)
+    {
+        $user = $request->user(); // Accede al usuario autenticado actualmente
+        
+        // Elimina todos los tokens asociados con el usuario
+        $user->tokens()->delete();
+    
+        return response()->json([
+            'message' => 'Cierre de sesión exitoso'
+        ]);
     }
 
 
