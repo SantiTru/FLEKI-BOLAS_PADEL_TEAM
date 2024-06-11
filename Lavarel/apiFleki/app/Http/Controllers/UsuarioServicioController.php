@@ -3,63 +3,42 @@
 namespace App\Http\Controllers;
 
 use App\Models\UsuarioServicio;
+use App\Http\Requests\UsuarioServicioRequest;
+use App\Http\Resources\UsuarioServicioResource;
 use Illuminate\Http\Request;
 
 class UsuarioServicioController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    public function __construct()
+    {
+        $this->middleware('auth:sanctum');
+    }
+
     public function index()
     {
-        //
+        return UsuarioServicioResource::collection(UsuarioServicio::with(['user', 'servicio'])->get());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function store(UsuarioServicioRequest $request)
     {
-        //
+        $usuarioServicio = UsuarioServicio::create($request->validated());
+        return new UsuarioServicioResource($usuarioServicio);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
     public function show(UsuarioServicio $usuarioServicio)
     {
-        //
+        return new UsuarioServicioResource($usuarioServicio->load(['user', 'servicio']));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(UsuarioServicio $usuarioServicio)
+    public function update(UsuarioServicioRequest $request, UsuarioServicio $usuarioServicio)
     {
-        //
+        $usuarioServicio->update($request->validated());
+        return new UsuarioServicioResource($usuarioServicio->load(['user', 'servicio']));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, UsuarioServicio $usuarioServicio)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(UsuarioServicio $usuarioServicio)
     {
-        //
+        $usuarioServicio->delete();
+        return response()->noContent();
     }
 }

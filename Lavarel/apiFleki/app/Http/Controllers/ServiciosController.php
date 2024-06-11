@@ -3,63 +3,42 @@
 namespace App\Http\Controllers;
 
 use App\Models\Servicios;
+use App\Http\Requests\ServiciosRequest;
+use App\Http\Resources\ServiciosResource;
 use Illuminate\Http\Request;
 
 class ServiciosController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    public function __construct()
+    {
+        $this->middleware('auth:sanctum');
+    }
+
     public function index()
     {
-        //
+        return ServiciosResource::collection(Servicios::with('tipoServicio')->get());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function store(ServiciosRequest $request)
     {
-        //
+        $servicios = Servicios::create($request->validated());
+        return new ServiciosResource($servicios);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
     public function show(Servicios $servicios)
     {
-        //
+        return new ServiciosResource($servicios->load('tipoServicio'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Servicios $servicios)
+    public function update(ServiciosRequest $request, Servicios $servicios)
     {
-        //
+        $servicios->update($request->validated());
+        return new ServiciosResource($servicios->load('tipoServicio'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Servicios $servicios)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Servicios $servicios)
     {
-        //
+        $servicios->delete();
+        return response()->noContent();
     }
 }

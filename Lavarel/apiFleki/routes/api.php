@@ -2,11 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UsuarioController;
-use App\Http\Controllers\TipoServicioController;
-use App\Http\Controllers\ServicioController;
-use App\Http\Controllers\UsuarioServicioController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TipoServiciosController;
+use App\Http\Controllers\ServiciosController;
+use App\Http\Controllers\UsuarioServicioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,20 +18,18 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-// Rutas de recursos para las entidades
-Route::apiResource('usuarios', UsuarioController::class);
-Route::apiResource('tipos-servicio', TipoServicioController::class);
-Route::apiResource('servicios', ServicioController::class);
-Route::apiResource('usuario-servicios', UsuarioServicioController::class);
-
 // Rutas de autenticación
-Route::post('/register', [AuthController::class, 'registro']);
-Route::post('/login', [AuthController::class, 'login']);
-Route::middleware('auth:sanctum')->post('/logout', [AuthController::class, 'logout']);
+Route::post('register', [AuthController::class, 'registro']);
+Route::post('login', [AuthController::class, 'login']);
+Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
+
+
+Route::middleware('auth:sanctum')->group(function () {
+
+    Route::apiResource('tipo_servicios', TipoServiciosController::class);
+    Route::apiResource('servicios', ServiciosController::class);
+    Route::apiResource('usuario_servicio', UsuarioServicioController::class);
+});
 
 
 

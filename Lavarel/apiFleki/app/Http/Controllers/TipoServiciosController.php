@@ -3,63 +3,42 @@
 namespace App\Http\Controllers;
 
 use App\Models\TipoServicios;
+use App\Http\Requests\TipoServiciosRequest;
+use App\Http\Resources\TipoServiciosResource;
 use Illuminate\Http\Request;
 
 class TipoServiciosController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    public function __construct()
+    {
+        $this->middleware('auth:sanctum');
+    }
+
     public function index()
     {
-        //
+        return TipoServiciosResource::collection(TipoServicios::all());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function store(TipoServiciosRequest $request)
     {
-        //
+        $tipoServicios = TipoServicios::create($request->validated());
+        return new TipoServiciosResource($tipoServicios);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
     public function show(TipoServicios $tipoServicios)
     {
-        //
+        return new TipoServiciosResource($tipoServicios);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(TipoServicios $tipoServicios)
+    public function update(TipoServiciosRequest $request, TipoServicios $tipoServicios)
     {
-        //
+        $tipoServicios->update($request->validated());
+        return new TipoServiciosResource($tipoServicios);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, TipoServicios $tipoServicios)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(TipoServicios $tipoServicios)
     {
-        //
+        $tipoServicios->delete();
+        return response()->noContent();
     }
 }
