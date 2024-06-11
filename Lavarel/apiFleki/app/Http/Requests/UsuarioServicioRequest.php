@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class TipoServiciosRequest extends FormRequest
+class UsuarioServicioRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -20,9 +20,9 @@ class TipoServiciosRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nombre_tipo' => 'required|string|max:255',
-            'descripcion_tipo' => 'nullable|string',
-            'precio' => 'required|numeric|min:0',
+            'id_usuario' => 'required|exists:users,id',
+            'id_servicios' => 'required|exists:servicios,id_servicios',
+            'fecha_contratacion' => 'required|date',
         ];
     }
 }
