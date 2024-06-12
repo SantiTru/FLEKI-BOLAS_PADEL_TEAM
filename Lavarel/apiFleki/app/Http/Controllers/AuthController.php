@@ -14,37 +14,6 @@ class AuthController extends Controller
      */
     public function registro(Request $request)
     {
-<<<<<<< HEAD
-        try {
-            // Crear un nuevo usuario
-            $user = User::create([
-                'name' => $request->input('name'),
-                'email' => $request->input('email'),
-                'password' => bcrypt($request->input('password'))
-            ]);
-     
-            $user->save();
-            
-            // Retornar el token de autenticación y la información del usuario
-            return [
-                'token' => $user->createToken('token')->plainTextToken,
-                'user' => $user
-            ];
-        } catch (\Exception $e) {
-            return response()->json(['error' => 'Error al registrar el usuario'], 500);
-        }
-    }
-    public function logout(Request $request)
-    {
-        $user = $request->user(); // Accede al usuario autenticado actualmente
-        
-        // Elimina todos los tokens asociados con el usuario
-        $user->tokens()->delete();
-    
-        return response()->json([
-            'message' => 'Cierre de sesión exitoso'
-        ]);
-=======
         $request->validate([
             'nombre_usuario' => 'required|string|max:255',
             'apellidos' => 'required|string|max:255',
@@ -70,7 +39,6 @@ class AuthController extends Controller
             \Log::error('Error al registrar el usuario: ' . $e->getMessage());
             return response()->json(['error' => 'Error al registrar el usuario'], 500);
         }
->>>>>>> 7cab46cd4dbd1a46df3a2fd0a10d9564a3e0f008
     }
 
     /**
