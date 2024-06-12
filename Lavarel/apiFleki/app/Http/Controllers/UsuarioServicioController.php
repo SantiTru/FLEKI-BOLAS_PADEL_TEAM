@@ -9,14 +9,9 @@ use Illuminate\Http\Request;
 
 class UsuarioServicioController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth:sanctum');
-    }
-
     public function index()
     {
-        return UsuarioServicioResource::collection(UsuarioServicio::with(['user', 'servicio'])->get());
+        return UsuarioServicioResource::collection(UsuarioServicio::with(['user', 'servicios'])->get());
     }
 
     public function store(UsuarioServicioRequest $request)
@@ -27,13 +22,13 @@ class UsuarioServicioController extends Controller
 
     public function show(UsuarioServicio $usuarioServicio)
     {
-        return new UsuarioServicioResource($usuarioServicio->load(['user', 'servicio']));
+        return new UsuarioServicioResource($usuarioServicio->load(['user', 'servicios']));
     }
 
     public function update(UsuarioServicioRequest $request, UsuarioServicio $usuarioServicio)
     {
         $usuarioServicio->update($request->validated());
-        return new UsuarioServicioResource($usuarioServicio->load(['user', 'servicio']));
+        return new UsuarioServicioResource($usuarioServicio->load(['user', 'servicios']));
     }
 
     public function destroy(UsuarioServicio $usuarioServicio)

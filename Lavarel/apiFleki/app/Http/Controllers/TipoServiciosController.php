@@ -9,11 +9,6 @@ use Illuminate\Http\Request;
 
 class TipoServiciosController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth:sanctum');
-    }
-
     public function index()
     {
         return TipoServiciosResource::collection(TipoServicios::all());

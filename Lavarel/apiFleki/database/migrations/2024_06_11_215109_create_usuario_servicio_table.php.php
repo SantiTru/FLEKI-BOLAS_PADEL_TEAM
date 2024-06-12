@@ -19,7 +19,7 @@ return new class extends Migration
             $table->timestamps();
 
             // Foreign key constraints
-            $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_usuario')->references('id')->on('User')->onDelete('cascade');
             $table->foreign('id_servicios')->references('id_servicios')->on('servicios')->onDelete('cascade');
         });
     }

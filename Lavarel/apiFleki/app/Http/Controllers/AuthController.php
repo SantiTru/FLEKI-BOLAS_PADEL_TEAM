@@ -15,15 +15,17 @@ class AuthController extends Controller
     public function registro(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'nombre_usuario' => 'required|string|max:255',
+            'apellidos' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:User',
             'password' => 'required|string|min:8|confirmed',
         ]);
 
         try {
             // Crear un nuevo usuario
             $user = User::create([
-                'name' => $request->input('name'),
+                'nombre_usuario' => $request->input('nombre_usuario'),
+                'apellidos' => $request->input('apellidos'),
                 'email' => $request->input('email'),
                 'password' => Hash::make($request->input('password'))
             ]);
@@ -34,6 +36,7 @@ class AuthController extends Controller
                 'user' => $user
             ], 201);
         } catch (\Exception $e) {
+            \Log::error('Error al registrar el usuario: ' . $e->getMessage());
             return response()->json(['error' => 'Error al registrar el usuario'], 500);
         }
     }
@@ -73,7 +76,7 @@ class AuthController extends Controller
         $token = $user->createToken('auth_token')->plainTextToken;
 
         return response()->json([
-            'message' => '¡Hola, ' . $user->name . '!',
+            'message' => '¡Hola, ' . $user->nombre_usuario . '!',
             'access_token' => $token,
             'token_type' => 'Bearer'
         ]);

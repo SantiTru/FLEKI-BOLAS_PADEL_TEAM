@@ -20,7 +20,7 @@ class UsuarioServicioRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'id_usuario' => 'required|exists:users,id',
+            'id_usuario' => 'required|exists:User,id',
             'id_servicios' => 'required|exists:servicios,id_servicios',
             'fecha_contratacion' => 'required|date',
         ];

@@ -7,15 +7,15 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
-class UsersSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        // Insert users
-        DB::table('users')->insert([
+        // Insert user
+        DB::table('User')->insert([
             [
                 'nombre_usuario' => 'Santi',
                 'apellidos' => 'Truji',
