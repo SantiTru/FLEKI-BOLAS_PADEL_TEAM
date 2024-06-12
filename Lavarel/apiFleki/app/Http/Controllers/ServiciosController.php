@@ -1,104 +1,39 @@
 <?php
 
-
 namespace App\Http\Controllers;
 
-
-use App\Models\Servicio;
-
-
-use App\Http\Requests\ServicioRequest;
-use App\Http\Resources\ServicioResource;
 use App\Models\Servicios;
-use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Requests\ServiciosRequest;
+use App\Http\Resources\ServiciosResource;
+use Illuminate\Http\Request;
 
-
-class ServicioController extends Controller
+class ServiciosController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index(): JsonResource
+    public function index()
     {
-        $Servicios = Servicios::all();
-        // return response()->json($productos,200);
-        return ServicioResource::collection($Servicios);
+        return ServiciosResource::collection(Servicios::with('tipoServicio')->get());
     }
 
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function store(ServiciosRequest $request)
     {
-        //
+        $servicios = Servicios::create($request->validated());
+        return new ServiciosResource($servicios);
     }
 
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(ServicioRequest $request)
+    public function show(Servicios $servicios)
     {
-        $etiquetas = $request->labels;
-        $params = $request->all();
-        unset($params["labels"]);
-        $Servicio = Servicios::create($params);
-        $Servicio->labels()->attach($etiquetas);
-       
-        return response()->json($Servicio, 201);
-
-
+        return new ServiciosResource($servicios->load('tipoServicio'));
     }
 
-
-    /**
-     * Display the specified resource.
-     */
-    public function show($id): JsonResource
+    public function update(ServiciosRequest $request, Servicios $servicios)
     {
-        $Servicio = Servicios::find($id);
-        // return response()->json($producto,200);
-
-
-        return new ServicioResource($Servicio);
+        $servicios->update($request->validated());
+        return new ServiciosResource($servicios->load('tipoServicio'));
     }
 
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Servicios $Servicio)
+    public function destroy(Servicios $servicios)
     {
-
-
-    }
-
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(ServiciosRequest $request, $id)
-{
-    $Servicio = Servicios::findOrFail($id);
-    $Servicio->labels()->detach();
-    $Servicio->titulo = $request->titulo;
-    $Servicio->descripcion = $request->descripcion;
-    $Servicio->save();
-    $Servicio->labels()->attach($request->labels);
-    return new ServicioResource($Servicio);
-}
-
-
-
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Servicios $Servicio)
-    {
-        $Servicio->labels()->detach();
-        $Servicio->delete();
-        return response()->json($Servicio, 200);
+        $servicios->delete();
+        return response()->noContent();
     }
 }

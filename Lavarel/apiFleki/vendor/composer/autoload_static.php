@@ -537,8 +537,22 @@ class ComposerStaticInit4cee9c0e84d84a09608eb9b1e55e9dd0
     public static $classMap = array (
         'App\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+<<<<<<< HEAD
+=======
+        'App\\Http\\Controllers\\ServiciosController' => __DIR__ . '/../..' . '/app/Http/Controllers/ServiciosController.php',
+        'App\\Http\\Controllers\\TipoServiciosController' => __DIR__ . '/../..' . '/app/Http/Controllers/TipoServiciosController.php',
+        'App\\Http\\Controllers\\UsuarioServicioController' => __DIR__ . '/../..' . '/app/Http/Controllers/UsuarioServicioController.php',
+        'App\\Http\\Requests\\ServiciosRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ServiciosRequest.php',
+        'App\\Http\\Requests\\TipoServiciosRequest' => __DIR__ . '/../..' . '/app/Http/Requests/TipoServiciosRequest.php',
+        'App\\Http\\Requests\\UsuarioServicioRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UsuarioServicioRequest.php',
+        'App\\Http\\Resources\\ServiciosResource' => __DIR__ . '/../..' . '/app/Http/Resources/ServiciosResource.php',
+        'App\\Http\\Resources\\TipoServiciosResource' => __DIR__ . '/../..' . '/app/Http/Resources/TipoServiciosResource.php',
+        'App\\Http\\Resources\\UsuarioServicioResource' => __DIR__ . '/../..' . '/app/Http/Resources/UsuarioServicioResource.php',
+>>>>>>> 7cab46cd4dbd1a46df3a2fd0a10d9564a3e0f008
         'App\\Models\\Servicios' => __DIR__ . '/../..' . '/app/Models/Servicios.php',
+        'App\\Models\\TipoServicios' => __DIR__ . '/../..' . '/app/Models/TipoServicios.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Models\\UsuarioServicio' => __DIR__ . '/../..' . '/app/Models/UsuarioServicio.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
@@ -661,6 +675,13 @@ class ComposerStaticInit4cee9c0e84d84a09608eb9b1e55e9dd0
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
+<<<<<<< HEAD
+=======
+        'Database\\Seeders\\ServiciosSeeder' => __DIR__ . '/../..' . '/database/seeders/ServiciosSeeder.php',
+        'Database\\Seeders\\TipoServiciosSeeder' => __DIR__ . '/../..' . '/database/seeders/TipoServiciosSeeder.php',
+        'Database\\Seeders\\UsersSeeder' => __DIR__ . '/../..' . '/database/seeders/UsersSeeder.php',
+        'Database\\Seeders\\UsuarioServicioSeeder' => __DIR__ . '/../..' . '/database/seeders/UsuarioServicioSeeder.php',
+>>>>>>> 7cab46cd4dbd1a46df3a2fd0a10d9564a3e0f008
         'DateError' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateError.php',
         'DateException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateException.php',
         'DateInvalidOperationException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateInvalidOperationException.php',

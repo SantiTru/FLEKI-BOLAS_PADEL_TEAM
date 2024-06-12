@@ -1,24 +1,28 @@
 <?php
-namespace App\Models;
 
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-
 
 class Servicios extends Model
 {
     use HasFactory;
-    protected $fillable = ["titulo", "descripcion"];
-    protected $hidden = ["created_at", "updated_at"];
-    public function labels(): BelongsToMany
+
+    protected $table = 'servicios';
+
+    protected $fillable = [
+        'fecha_evento',
+        'id_tipo_servicios',
+    ];
+
+    public function tipoServicio()
     {
-        return $this->belongsToMany(
-            Servicios::class,
-            'tarea_etiqueta',
-            'tarea_id',
-            'etiqueta_id'
-        );
+        return $this->belongsTo(TipoServicios::class, 'id_tipo_servicios', 'id_tipo_servicios');
+    }
+
+    public function usuarios()
+    {
+        return $this->hasMany(UsuarioServicio::class, 'id_servicios');
     }
 }

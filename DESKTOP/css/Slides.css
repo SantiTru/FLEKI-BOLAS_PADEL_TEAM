@@ -1,186 +1,94 @@
-/*
----00 WHITESPACE SYSTEM / ATOM
-
-    - Spaging system (px)
-      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-
----01 TYPOGRAPHY SYSTEM / ATOM
-    
-
-    - Font sizes (px)
-    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-*/
-
-/****************************************/
-/* HEADER */
-/****************************************/
-
-/****************************************/
-/* NAVIGATION */
-/****************************************/
-
-/****************************************/
-/* HERO SECTION*/
-/****************************************/
-
-/* CARRUSEL INICIO SECTION*/
-
-.inicio {
-  display: flex;
-  justify-content: center;
-  margin-top: 60px;
-}
-.carrusel img {
-  width: 0%;
-  flex-grow: 1;
-  object-fit: cover;
-  opacity: 0.8;
-  transition: all 2s ease;
-}
-.carrusel img:hover {
-  cursor: crosshair;
-  width: 60%;
-  opacity: 1;
-  filter: contrast(120%);
-  z-index: 1;
-  margin-left: -30px;
-  margin-top: -30px;
-  margin-bottom: -30px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-}
-.carrusel {
-  width: 800px;
-  height: 430px;
-  display: flex;
-}
-.carrusel:hover .central {
-  width: 0%;
-  flex-grow: 1;
-  object-fit: cover;
-  opacity: 0.8;
-  transition: all 2s ease;
-  margin-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.carrusel .central {
-  cursor: crosshair;
-  width: 60%;
-  opacity: 1;
-  filter: contrast(120%);
-  z-index: 1;
-  margin-left: -30px;
-  margin-top: -30px;
-  margin-bottom: -30px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+body {
+  font-family: Arial, sans-serif;
 }
 
-/****************************************/
-/* AS FEATURED IN SECTION */
-/****************************************/
-
-/****************************************/
-/* HOW IT WORKS SECTION*/
-/****************************************/
-
-/****************************************/
-/* MEALS SECTION*/
-/****************************************/
-
-/****************************************/
-/* TESTIMONIALS SECTION*/
-/****************************************/
-
-blockquote {
-  margin: 0;
-  position: relative;
+.carrusel-title{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: larger;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 3rem;
 }
+
 
 .feedback {
-  max-width: 900px;
-  margin: auto;
-  overflow: hidden;
+  max-width: 700px;
+  margin: 5rem auto;
   position: relative;
-  align-items: center;
+  height: 300px;
+}
+
+.feedback-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #4a4a4a;
 }
 
 .feedback-container {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+  width: 100%;
+  height: 260px;
 }
 
 .feedback-item {
   min-width: 100%;
   box-sizing: border-box;
+  padding: 1rem;
+  transition: transform 0.5s ease-in-out;
   position: relative;
+  flex-shrink: 0;
 }
 
 .feedback-item img {
-  width: 100%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
   display: block;
-
-}
-
-/* Navegación de la galería */
-.feedback-navigation {
-  display: flex;
-  justify-content: space-between;
-  width: calc(100% - 40px);
-  margin: 0 20px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.nav-button {
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.nav-button > span {
-  font-size: 30px;
-}
-.nav-button:hover {
-  background-color: #005f5f;
-}
-.textoFeed {
-  text-align: center;
-  font-size: 20px;
-  color: rgba(0, 0, 0, 0.813);  
+  margin: 0 auto;
 }
 
 .textoContainer {
-  position: absolute; 
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%; 
-  padding: 10px; 
-  box-sizing: border-box;
+  min-width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: rgba(240, 248, 255, 0.8);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.245);
-  background-color: rgba(240, 248, 255, 0.556);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
+  height: 200px;
 }
 
-/****************************************/
-/* PRICING SECTION*/
-/****************************************/
+.textoFeed {
+  font-size: 1.35rem;
+  color: #333;
+  line-height: 1.5;
+}
 
-/****************************************/
-/* PLAN DETAILS SUBSECTION*/
-/****************************************/
+.feedback-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 2rem);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-250%);
+  left: 1rem;
+}
 
-/****************************************/
-/* FEATURE SUBSECTION*/
-/****************************************/
+.nav-button {
+  background-color: #8d12c9;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+  margin-top: -2rem;
+}
 
-/****************************************/
-/* CTA SECTION*/
-/****************************************/
-
-/****************************************/
-/* FOOTER SECTION */
-/****************************************/
+.nav-button:hover {
+  background-color: #f2eb32;
+}
