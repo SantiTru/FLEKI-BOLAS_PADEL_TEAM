@@ -25,12 +25,11 @@ Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:sanct
 
 
 Route::middleware('auth:sanctum')->group(function () {
-
     Route::apiResource('tipo_servicios', TipoServiciosController::class);
     Route::apiResource('servicios', ServiciosController::class);
     Route::apiResource('usuario_servicio', UsuarioServicioController::class);
+    Route::get('mis_servicios', [UsuarioServicioController::class, 'serviciosPorUsuario']);
 });
-
 
 
 

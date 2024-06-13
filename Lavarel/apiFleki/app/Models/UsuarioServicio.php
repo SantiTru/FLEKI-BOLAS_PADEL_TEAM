@@ -22,7 +22,7 @@ class UsuarioServicio extends Model
         return $this->belongsTo(User::class, 'id_usuario');
     }
 
-    public function servicio()
+    public function servicios()
     {
         return $this->belongsTo(Servicios::class, 'id_servicios');
     }

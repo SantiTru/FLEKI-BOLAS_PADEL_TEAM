@@ -28,6 +28,7 @@ class TipoServiciosController extends Controller
     public function update(TipoServiciosRequest $request, TipoServicios $tipoServicios)
     {
         $tipoServicios->update($request->validated());
+        $tipoServicios->refresh(); 
         return new TipoServiciosResource($tipoServicios);
     }
 

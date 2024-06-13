@@ -10,6 +10,7 @@ class Servicios extends Model
     use HasFactory;
 
     protected $table = 'servicios';
+    protected $primaryKey = 'id_servicios';
 
     protected $fillable = [
         'fecha_evento',
