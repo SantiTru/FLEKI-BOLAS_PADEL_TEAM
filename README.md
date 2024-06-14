@@ -72,43 +72,38 @@ Del 20/05/2024 al 10/06/2024
 
 Durante este tiempo hemos estado compaginando React con Laravel, para no quedarnos atrás. En React hemos realizado una página la cual tiene componentes en JavaScript, como es la reproducción de una vídeo, de esta forma hemos realizado una interfaz muy sencilla y visual para una pantalla móvil. Al mismo tiempo hemos estado creando el prototipo en Figma, íbamos a la par, creación de Figma y creación de React, por lo que en este periódo de tiempo hemos realizamos ambas cosas.
 
+** CREACIÓN DE PRESENTACIÓN PARA LA EXPOSICIÓN DEL 18/06/2024
+
+Tras conocer el día de la presentación del proyecto nos disponemos a realizar la presentación en Canva:
+https://www.canva.com/design/DAGHpsYAkrA/l_rm5Cpqutqqk8J8Gs2E4Q/edit?utm_content=DAGHpsYAkrA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+Con esta presentación queremos hacer ver cómo y de dónde parte la idea de la creación de la página, los problemas que hemos tenido, o al menos mostrar alguno de ellos y las soluciones que hemos implantado para seguir desarrollando. 
+
+
 ** DESPLIEGUE EN AWS
 
 Del 10/06/2024 al 14/06/2024
 
 En ésta última semana hemos realizado el despliegue de la aplicación web en AWS, para ellos hemos estado creando la instancia, configurando apache, poniéndo seguridad SSH, añadiendo el protocolo CERBOT, hemos añadido proftpd, IP elástica, hemos utilizado también duckdns para que nos propocionase un nombre fácil para poder acceder a la página.
 
+** CREACIÓN DE VIDEO FINAL
 
+Uno de los requisitos es hacer un vídeo para mostrar el funcionamiento del proyecto, en este caso hemos realizado el vídeo de forma local, en donde explicamos todas las funcionalidades que tiene la página para que cuando reviséis la documentación podáis verlo todo y no perdáis detalle. En el vídeo se muestra el resultado final de lo que hemos planteado.
 
+## RECURSOS ## 
 
-## **16/04/2024**
-
-### Tareas realizadas / usuario
-
-- Implementación bitácora del proyecto / ***Santi***
-- Dar de alta e informar al equipo educativo el repositorio de GitHub del proyecto / ***Santi***
-- Resumen dudas / ***Santi***
-- Implementar lista de tareas / ***Santi***
-
-### Próximos pasos
-
-☀️ Revisión del esquema E/R según observaciones del equipo educativo. Página mobile Figma.
-
-## **06/05/2024**
-
-### Tareas realizadas / usuario
-
-- Versión de Login y Registro con Javascript / ***Santi***
-- Revisar estructura de carpetas / ***Santi***
-- Consulta de dudas / ***Santi***
-
-### Próximos pasos
-
-☀️ Revisión del esquema E/R según observaciones del equipo educativo.
-☀️ Plantear Sección tareas de usuario
-☀️ Plantear sección nutrición
-
-### Despliegue de la página web
+* Despliegue de la página web
 Dirección: [flekipadel.duckdns.org](https://flekipadel.duckdns.org/)
+* Figma
+Dirección: https://www.figma.com/design/mko1vh8buMjYs2BoNCvjEm/FLEKI-BOLAS-PADEL-TEAM?node-id=1-2&t=ZDoisXljEu8uUfTJ-0
+APIs que hemos usado para nuestro proyecto:
+  1.- Openweathermap
+  2.- Spoonacula
+* Vídeos tutoriales para poder realizar partes de nuestro código como por ejemplo:
+*   Creación de calendario a través de lista ordenada
+*   Uso de API
+*   Cómo realizar un reproductor en REACT
+*   entre otros
+
+*   
 
 
