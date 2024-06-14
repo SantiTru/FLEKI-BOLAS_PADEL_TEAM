@@ -6,14 +6,13 @@
 
 Página web equipo profesional de pádel
 
-
 Notion: https://nebulous-glade-1db.notion.site/FLEKI-BOLAS-P-DEL-TEAM-fad327d6948949b1942a4ff101635158?pvs=74
 
 Fleki-Bolas Pádel Team es una página web en donde podrás realizar reservas de pistas, cursos y clases, además ofrecemos servicio de nutrición y una dieta especializada según tus características. Damos valor añadido a nuestro equipo ya que contamos con un espacio personalizado donde podrás ver todas las reservas realizadas así como ver el tiempo que hace previo a la reserva para poder seleccionar un tipo de pista adecuado (indoor - outdoor).
 
-- 🔭 We are currently working on Figma project and Frontend
+- 🔭 We are currently working on Backend and Frontend
 - 🌱 We are currently learning about APIs and more
-- 🤔 We are looking for help with Database
+- 🤔 We are looking for help with Deploy
 - 💬 Ask us about padel tennis or cooking!
 - 😄 Pronouns: She/her, He/him
 - ⚡ Fun fact: Santi's favorite hobby is cooking, Cris' favorite hobby is paddle tennis. This page is our favorite hobbies made web page.
@@ -57,14 +56,14 @@ Comenzamos con el diseño del prototipo para saber los elementos a utilizar, dis
 
 Del 28/04/2024 al 19/05/2024
 
-Durante este periodo de tiempo hemos estado realizando la maquetación de la página web en los diferentes lenguajes seleccionados, en nuestro caso en HTML, para ello empezamos creando las páginas en el mismo orden que en Figma, ya que nos resultaba mucho mejor. Una vez empezamos con la construcción había componentes de Figma que no podíamos realizar con CSS y por tanto hemos metido Javascritp - Vanilla para poder realizar las diferentes acciones que necesitábamos para la lóginca de la página.
+Durante este periodo de tiempo hemos estado realizando la maquetación de la página web en los diferentes lenguajes seleccionados, en nuestro caso en HTML, para ello empezamos creando las páginas en el mismo orden que en Figma, ya que nos resultaba mucho mejor. Una vez empezamos con la construcción había componentes de Figma que no podíamos realizar con CSS y por tanto hemos metido Javascritp - Vanilla para poder realizar las diferentes acciones que necesitábamos para la lógica de la página.
 Durante este tiempo hemos tenido tutoría con Rocío ya que teníamos algunas dudas de cómo realizar ciertas acciones en la página y queríamos consultarlo con ella, tras la tutoría presencial nos queda bastante claro y continuamos nuestro trabajo para seguir realizando la página web, por ejemplo, le enseñamos el calendario, un calendario donde poder ver los eventos y el cual hemos cambiado de formato con respecto a nuestro prototipo de figma ya que al realizarlo en html tuvimos ciertos problemas y finalmente decidimos hacerlo mediante lista, porque nos era más fácil a la hora de colocar todos los eventos que queríamos. 
 
 ** CONSTRUCCION LARAVEL
 
 Del 20/05/2024 al 14/06/2024
 
-Durante este período hemos estado desarrollando el código en Laravel, la verdad, que hemos tenido muchas dificultades, porque hay veces que no nos funcionaban sanctum, otras veces docker, luego los endpoints no salían correctamente y hemos tenido mucha dificultad, tal ha sido que hasta última hora hemos tenido problemas, hemos contactado con Alicia para tener alguna tutoría en este período y que nos pudisese echar una mano para continuar, pero finalmente pudimos averiguar o mejor dicho dar con la clave para poder avanzar y por tanto seguirmos adelante realizando cambios y probando para que todos los endpoint saliensen correctamente.
+Durante este período hemos estado desarrollando el código en Laravel, la verdad, que hemos tenido muchas dificultades, porque hay veces que no nos funcionaban sanctum, otras veces docker, luego los endpoints no salían correctamente y hemos tenido mucha dificultad, tal ha sido que hasta última hora hemos tenido problemas, hemos contactado con Alicia para tener alguna tutoría en este período y que nos pudisese echar una mano para continuar, pero finalmente pudimos averiguar o mejor dicho dar con la clave para poder avanzar y por tanto seguirmos adelante realizando cambios y probando para que todos los endpoints saliensen correctamente.
 
 ** CONSTRUCCIÓN DE REACT
 
@@ -83,7 +82,7 @@ Con esta presentación queremos hacer ver cómo y de dónde parte la idea de la 
 
 Del 10/06/2024 al 14/06/2024
 
-En ésta última semana hemos realizado el despliegue de la aplicación web en AWS, para ellos hemos estado creando la instancia, configurando apache, poniéndo seguridad SSH, añadiendo el protocolo CERBOT, hemos añadido proftpd, IP elástica, hemos utilizado también duckdns para que nos propocionase un nombre fácil para poder acceder a la página.
+En ésta última semana hemos realizado el despliegue de la aplicación web en AWS, para ellos hemos estado creando la instancia, configurando Apache, poniéndo seguridad SSH, añadiendo el protocolo CERBOT, hemos añadido FTPS, IP elástica, Balanceador de carga, RDS y hemos utilizado también DuckDNS para que nos propocionase un nombre fácil para poder acceder a la página.
 
 ** CREACIÓN DE VIDEO FINAL
 
@@ -97,13 +96,11 @@ Dirección: [flekipadel.duckdns.org](https://flekipadel.duckdns.org/)
 Dirección: https://www.figma.com/design/mko1vh8buMjYs2BoNCvjEm/FLEKI-BOLAS-PADEL-TEAM?node-id=1-2&t=ZDoisXljEu8uUfTJ-0
 APIs que hemos usado para nuestro proyecto:
   1.- Openweathermap
-  2.- Spoonacula
+  2.- Spoonacular
 * Vídeos tutoriales para poder realizar partes de nuestro código como por ejemplo:
 *   Creación de calendario a través de lista ordenada
 *   Uso de API
 *   Cómo realizar un reproductor en REACT
 *   entre otros
-
-*   
 
 
