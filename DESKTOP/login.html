@@ -21,7 +21,7 @@
         <input type="password" id="password" name="password" required>
       </div>
       <a href="./paginaInicioConLogin.html" class="link">
-        <button id="inicio-link-btn">Inicio Sesion</button></a>
+        <button id="login-link-btn">Iniciar Sesión</button></a>
       <!--<button id="register-link-btn">Iniciar Sesión</button>-->
     </form>
     <div class="register-link">
@@ -36,6 +36,11 @@
     document.getElementById('register-link-btn').onclick = function() {
       window.location.href = "register.html";
     };
+    
+    document.getElementById('login-link-btn').onclick = function() {
+      window.location.href = "paginaInicioConLogin.html";
+    };
+  
   </script>
 </body>
 </html>
