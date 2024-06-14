@@ -42,10 +42,41 @@ Comenzamos con el diseño del prototipo para saber los elementos a utilizar, dis
         * Fleki - agenda
         * Bolas de pádel
      
-    * Siguiente, página del carrito de la compra, en esta página hemos querido simular cómo sería la cesta una vez realizases la selección de todos los elementos que deseas adquirir
+    * Siguiente, página del carrito de la compra, en esta página hemos querido simular cómo sería la cesta una vez realizases la selección de todos los elementos que deseas adquirir.
           
-    * Seguidamente comenzamos a crear la página de los cursos, en esta página hemos tardado poco tiempo en el montaje de las cards, ya que como hemos explicado anteriormente a la hora de realizar componentes nos ha agilizado mucho el trabajo, 
+    * Seguidamente comenzamos a crear la página de los cursos, en esta hemos reutilizados componentes, lo cual nos ha sido mucho más fácil la creación de esta página.
+   
+    * Comenzamos con la parte de nutrición, hemos hecho un fiel reflejo, al igual que la página de los cursos, y para ellos hemos usado la misma sistemática, realizar componente y reutilizar, de esta forma ha sido mucho más sencilla la construcción. En este punto, he de destacar que hemos usado un overlay para poder hacer el efecto de superponer la card por encima del resto, lo cual ha quedado bastante bien y acorde a lo que buscamos.
+   
+    * Por últimos hemos realizar el registro y login, porque al ser dos página más sencillas, lo hemos dejado para el final porque teníamos bastante clara su construcción.
+   
+    * Durante el proceso hemos estado haciendo todas las vinculaciones para que la página pueda navegar de una a otro como si se tratase de la página original. Hemos intentado no realizar muchos cambios a la hora de realizar el html, pero alguno hemos tenido para poder mejorar lo que ya teníamos.
+   
 
+** CONSTRUCCION HTML / CSS / JAVASCRIPT
+
+Del 28/04/2024 al 19/05/2024
+
+Durante este periodo de tiempo hemos estado realizando la maquetación de la página web en los diferentes lenguajes seleccionados, en nuestro caso en HTML, para ello empezamos creando las páginas en el mismo orden que en Figma, ya que nos resultaba mucho mejor. Una vez empezamos con la construcción había componentes de Figma que no podíamos realizar con CSS y por tanto hemos metido Javascritp - Vanilla para poder realizar las diferentes acciones que necesitábamos para la lóginca de la página.
+Durante este tiempo hemos tenido tutoría con Rocío ya que teníamos algunas dudas de cómo realizar ciertas acciones en la página y queríamos consultarlo con ella, tras la tutoría presencial nos queda bastante claro y continuamos nuestro trabajo para seguir realizando la página web, por ejemplo, le enseñamos el calendario, un calendario donde poder ver los eventos y el cual hemos cambiado de formato con respecto a nuestro prototipo de figma ya que al realizarlo en html tuvimos ciertos problemas y finalmente decidimos hacerlo mediante lista, porque nos era más fácil a la hora de colocar todos los eventos que queríamos. 
+
+** CONSTRUCCION LARAVEL
+
+Del 20/05/2024 al 14/06/2024
+
+Durante este período hemos estado desarrollando el código en Laravel, la verdad, que hemos tenido muchas dificultades, porque hay veces que no nos funcionaban sanctum, otras veces docker, luego los endpoints no salían correctamente y hemos tenido mucha dificultad, tal ha sido que hasta última hora hemos tenido problemas, hemos contactado con Alicia para tener alguna tutoría en este período y que nos pudisese echar una mano para continuar, pero finalmente pudimos averiguar o mejor dicho dar con la clave para poder avanzar y por tanto seguirmos adelante realizando cambios y probando para que todos los endpoint saliensen correctamente.
+
+** CONSTRUCCIÓN DE REACT
+
+Del 20/05/2024 al 10/06/2024
+
+Durante este tiempo hemos estado compaginando React con Laravel, para no quedarnos atrás. En React hemos realizado una página la cual tiene componentes en JavaScript, como es la reproducción de una vídeo, de esta forma hemos realizado una interfaz muy sencilla y visual para una pantalla móvil. Al mismo tiempo hemos estado creando el prototipo en Figma, íbamos a la par, creación de Figma y creación de React, por lo que en este periódo de tiempo hemos realizamos ambas cosas.
+
+** DESPLIEGUE EN AWS
+
+Del 10/06/2024 al 14/06/2024
+
+En ésta última semana hemos realizado el despliegue de la aplicación web en AWS, para ellos hemos estado creando la instancia, configurando apache, poniéndo seguridad SSH, añadiendo el protocolo CERBOT, hemos añadido proftpd, IP elástica, hemos utilizado también duckdns para que nos propocionase un nombre fácil para poder acceder a la página.
 
 
 
