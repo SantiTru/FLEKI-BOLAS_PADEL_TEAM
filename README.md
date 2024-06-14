@@ -24,6 +24,32 @@ Fleki-Bolas Pádel Team es una página web en donde podrás realizar reservas de
 
 # Bitácora del proyecto
 
+** FIGMA **
+Del 13/04/2024 al 28/04/2024
+
+Comenzamos con el diseño del prototipo para saber los elementos a utilizar, diseño de la página, lenguajes a usar, y forma de planificación y organización de la página.  Al ser una página dedicada al pádel y a la nutrición nos hemos basado en páginas retros, estilo a los 90´s con colores llamativos y una interfaz muy sencilla e intuitiva. Durante este tiempo hemos creado:
+  * Pasos que hemos dado para la creación del prototipo:
+      * Creación de página Desktop: Creamos la página principal sin login, para tener una primera página de muestra para que todo el público pueda conocer Fleki-Bolas Padel Team. En esta página hemos realizado diferente componentes, y para ello se ha creado una sección de recursos, en donde cada frame lo hemos llamado según la sección a la que hace referencia, para que luego en la página de Desktop podamos ir a la sección de Asset y poder elegir el componente más adecuado. Tenemos estos componentes creados para la página página principal:
+          * Paleta de colores
+          * Tipografía
+          * Sobre el equipo - componente
+          * Idioma
+          * Componenter - Peques Cards
+      Al realizar todos estos componentes hacen que se puedan reutilizar para más parte de nuestra página y sea mucho más operativo, por ello merece la pena tardar un poco más de tiempo en estos y luego reutilizar a través de la sección de Assets.
+
+    * Luego nos pusimos a diseñar la página de inicio tras el login, ¿por qué? Porque en esta página queríamos hacer que cuando te logueases pudieses inscribirte en los torneos, ligas, entrenamientos de pádel y más abajo pudieses tener una fleki - agenda donde ver aquellos eventos en los que te has inscrito. Para todo esto hemos usado componentes que hemos creado:
+        * Calendario
+        * Fleki - agenda
+        * Bolas de pádel
+     
+    * Siguiente, página del carrito de la compra, en esta página hemos querido simular cómo sería la cesta una vez realizases la selección de todos los elementos que deseas adquirir
+          
+    * Seguidamente comenzamos a crear la página de los cursos, en esta página hemos tardado poco tiempo en el montaje de las cards, ya que como hemos explicado anteriormente a la hora de realizar componentes nos ha agilizado mucho el trabajo, 
+
+
+
+
+
 ## **16/04/2024**
 
 ### Tareas realizadas / usuario
