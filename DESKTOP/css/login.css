@@ -92,7 +92,24 @@ button:hover {
   transition: background-color 0.3s ease;
 }
 
+#inicio-link-btn{
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #8D12C9;
+  border-radius: 4px;
+  background-color: #8D12C9;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 #register-link-btn:hover {
+  background-color: #F2EB32;
+}
+
+#inicio-link-btn:hover {
   background-color: #F2EB32;
 }
 

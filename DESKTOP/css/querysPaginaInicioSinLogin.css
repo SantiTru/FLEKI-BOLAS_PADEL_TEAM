@@ -18,7 +18,7 @@
   }
 
   .imagen-zona-4-1 {
-    max-width: 100%;
+    
     height: auto;
   }
 
@@ -59,6 +59,11 @@
 
   .contenedor-zona-4-2 {
     padding: 20px;
+  }
+
+  .imagen-zona-4-2 {
+    margin-top: 10px; /* Añade espacio entre la imagen y el texto en dispositivos móviles */
+    margin: auto;
   }
 }
 

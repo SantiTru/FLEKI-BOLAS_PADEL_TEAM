@@ -1,4 +1,5 @@
 // registerUser.js
+const { default: axios } = require('axios');
 const api = require('./api');
 
 async function registerUser(name, email, password) {
@@ -16,5 +17,18 @@ async function registerUser(name, email, password) {
         console.error('Error registering user:', error.response ? error.response.data : error.message);
     }
 }
+
+function getUsers(){
+    axios({
+        url:"https://jsonplaceholder.typicode.com/users", //dirección a la que pedir los datos de los usuarios
+        method: "GET"
+    })
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+
+}
+
+getUsers()
+
 
 module.exports = registerUser;
