@@ -57,9 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
   if (form) {
       form.addEventListener("submit", function(event) {
           event.preventDefault();
-          // Aquí puedes agregar la lógica para enviar el formulario
-          // Por ejemplo, puedes realizar una petición AJAX al servidor
-          // o simplemente mostrar un mensaje de éxito
+
           console.log("Formulario enviado");
       });
   } else {

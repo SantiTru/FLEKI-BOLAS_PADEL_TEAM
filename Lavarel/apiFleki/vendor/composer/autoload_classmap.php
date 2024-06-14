@@ -8,8 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Http\\Controllers\\AuthController' => $baseDir . '/app/Http/Controllers/AuthController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
-<<<<<<< HEAD
-=======
     'App\\Http\\Controllers\\ServiciosController' => $baseDir . '/app/Http/Controllers/ServiciosController.php',
     'App\\Http\\Controllers\\TipoServiciosController' => $baseDir . '/app/Http/Controllers/TipoServiciosController.php',
     'App\\Http\\Controllers\\UsuarioServicioController' => $baseDir . '/app/Http/Controllers/UsuarioServicioController.php',
@@ -19,7 +17,6 @@ return array(
     'App\\Http\\Resources\\ServiciosResource' => $baseDir . '/app/Http/Resources/ServiciosResource.php',
     'App\\Http\\Resources\\TipoServiciosResource' => $baseDir . '/app/Http/Resources/TipoServiciosResource.php',
     'App\\Http\\Resources\\UsuarioServicioResource' => $baseDir . '/app/Http/Resources/UsuarioServicioResource.php',
->>>>>>> 7cab46cd4dbd1a46df3a2fd0a10d9564a3e0f008
     'App\\Models\\Servicios' => $baseDir . '/app/Models/Servicios.php',
     'App\\Models\\TipoServicios' => $baseDir . '/app/Models/TipoServicios.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
@@ -146,13 +143,10 @@ return array(
     'Cron\\MonthField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
     'Database\\Factories\\UserFactory' => $baseDir . '/database/factories/UserFactory.php',
     'Database\\Seeders\\DatabaseSeeder' => $baseDir . '/database/seeders/DatabaseSeeder.php',
-<<<<<<< HEAD
-=======
     'Database\\Seeders\\ServiciosSeeder' => $baseDir . '/database/seeders/ServiciosSeeder.php',
     'Database\\Seeders\\TipoServiciosSeeder' => $baseDir . '/database/seeders/TipoServiciosSeeder.php',
     'Database\\Seeders\\UsersSeeder' => $baseDir . '/database/seeders/UsersSeeder.php',
     'Database\\Seeders\\UsuarioServicioSeeder' => $baseDir . '/database/seeders/UsuarioServicioSeeder.php',
->>>>>>> 7cab46cd4dbd1a46df3a2fd0a10d9564a3e0f008
     'DateError' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/DateError.php',
     'DateException' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/DateException.php',
     'DateInvalidOperationException' => $vendorDir . '/symfony/polyfill-php83/Resources/stubs/DateInvalidOperationException.php',
