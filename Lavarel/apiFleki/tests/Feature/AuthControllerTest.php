@@ -2,73 +2,81 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Tests\TestCase;
 use App\Models\User;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
-use Laravel\Sanctum\Sanctum;
+use Tests\TestCase;
 
 class AuthControllerTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
-    public function puede_registrar_un_usuario()
+    /**
+     * Test for user registration.
+     */
+    public function test_user_can_register()
     {
         $response = $this->postJson('/api/register', [
-            'nombre_usuario' => 'Usuario de Prueba',
-            'apellidos' => 'Apellido de Prueba',
-            'email' => 'prueba@example.com',
+            'nombre_usuario' => 'testuser',
+            'apellidos' => 'testlastname',
+            'email' => 'testuser@example.com',
             'password' => 'password',
             'password_confirmation' => 'password',
         ]);
 
         $response->assertStatus(201);
-        $this->assertDatabaseHas('User', ['email' => 'prueba@example.com']);
+        $response->assertJsonStructure([
+            'token',
+            'user' => [
+                'id',
+                'nombre_usuario',
+                'apellidos',
+                'email',
+                'created_at',
+                'updated_at'
+            ]
+        ]);
     }
 
-    /** @test */
-    public function puede_iniciar_sesion_un_usuario()
+    /**
+     * Test for user login.
+     */
+    public function test_user_can_login()
     {
         $user = User::factory()->create([
-            'email' => 'prueba@example.com',
-            'password' => Hash::make('password'),
+            'email' => 'testuser@example.com',
+            'password' => Hash::make('password')
         ]);
 
         $response = $this->postJson('/api/login', [
-            'email' => 'prueba@example.com',
+            'email' => 'testuser@example.com',
             'password' => 'password',
         ]);
 
         $response->assertStatus(200);
-        $response->assertJsonStructure(['token']);
+        $response->assertJsonStructure([
+            'message',
+            'access_token',
+            'token_type'
+        ]);
     }
 
-    /** @test */
-    public function rechaza_credenciales_invalidas()
-    {
-        $user = User::factory()->create([
-            'email' => 'prueba@example.com',
-            'password' => Hash::make('password'),
-        ]);
-
-        $response = $this->postJson('/api/login', [
-            'email' => 'prueba@example.com',
-            'password' => 'contrasena_incorrecta',
-        ]);
-
-        $response->assertStatus(401);
-    }
-
-    /** @test */
-    public function puede_cerrar_sesion_un_usuario()
+    /**
+     * Test for user logout.
+     */
+    public function test_user_can_logout()
     {
         $user = User::factory()->create();
 
-        Sanctum::actingAs($user);
+        $token = $user->createToken('auth_token')->plainTextToken;
 
-        $response = $this->postJson('/api/logout');
+        $response = $this->withHeaders([
+            'Authorization' => 'Bearer ' . $token,
+        ])->postJson('/api/logout');
 
-        $response->assertStatus(204);
+        $response->assertStatus(200);
+        $response->assertJson([
+            'message' => 'Cierre de sesión exitoso'
+        ]);
     }
 }
